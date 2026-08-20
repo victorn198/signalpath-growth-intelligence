@@ -52,3 +52,6 @@ Validate with `python -m pipeline validate`, `pytest`, `npm test`, `npm run buil
 The same model can connect to a company's GA4 export, backend orders, media costs, and experimentation data. [Discuss a similar project](mailto:comercial@wickoai.com.br).
 
 See also [Portuguese documentation](README.pt-BR.md), [complete dashboard guide](docs/DASHBOARD_GUIDE.md), [metric catalog](docs/METRIC_CATALOG.md), and [demo guide](docs/DEMO_GUIDE.md).
+# Design innovation
+
+The **Growth Driver Tree** links active users, sessions, purchases, and tracked revenue in one decision path. It is recalculated with every filter and is designed to reveal where growth loses momentum before a team scales acquisition.

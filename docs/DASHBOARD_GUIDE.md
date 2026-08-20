@@ -104,4 +104,7 @@ Each KPI card contains the current value, direction, percentage change, and prio
 - Tracked revenue is not profit.
 - Multi-day activity is not subscription retention.
 - A public demo does not replace production identity, privacy, observability, or access controls.
+# Signature interaction: Growth Driver Tree
+
+Read the tree from left to right. A large user-to-session base with a sharp purchase drop points to journey or merchandising friction; a healthy purchase count with weak revenue points to order-value mix. Every node, chart, table, finding, and action uses the same filtered scope.
 

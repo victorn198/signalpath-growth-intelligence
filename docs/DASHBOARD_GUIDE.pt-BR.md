@@ -90,4 +90,7 @@ Cada card mostra valor atual, direção, variação percentual e comparação co
 ## Limites
 
 Os dados são históricos e ofuscados; associação de canal não é causalidade; receita não é lucro; retorno em vários dias não é retenção contratual; e uma demo pública não substitui controles de produção.
+# Interação principal: Árvore de Drivers
+
+Leia da esquerda para a direita. Uma base grande de usuários e sessões com forte queda em compras indica atrito na jornada ou no merchandising; compras saudáveis com receita fraca indicam problema de mix ou ticket. Todos os nós, gráficos, tabela, achado e ação usam o mesmo recorte filtrado.
 

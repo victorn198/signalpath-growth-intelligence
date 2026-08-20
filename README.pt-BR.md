@@ -32,3 +32,6 @@ npm run dev
 ```
 
 O case demonstra granularidade correta, reconciliação de compras, catálogo de métricas, interface responsiva em dois idiomas e limitações visíveis. Para adaptar a solução a GA4, pedidos, mídia e testes de uma empresa real: [contato](mailto:comercial@wickoai.com.br).
+# Inovação de design
+
+A **Árvore de Drivers de Crescimento** conecta usuários ativos, sessões, compras e receita rastreada em um único caminho decisório. Ela é recalculada com cada filtro e mostra onde o crescimento perde força antes de ampliar aquisição.
