@@ -1,0 +1,5 @@
+duckdb==1.5.4
+pyarrow>=18,<21
+pytest>=8,<9
+google-cloud-bigquery>=3.30,<4
+dbt-duckdb>=1.9,<2

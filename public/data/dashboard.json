@@ -1,0 +1,3351 @@
+{
+  "meta": {
+    "source": "Google GA4 public ecommerce sample",
+    "period": "2020-11-01 — 2021-01-31",
+    "builtAt": "2026-08-19",
+    "rows": 2251084,
+    "limitations": {
+      "en": "Obfuscated three-month Google Merchandise Store sample. It represents behavioral analytics patterns, not current business performance.",
+      "pt": "Amostra ofuscada de três meses da Google Merchandise Store. Representa padrões analíticos, não desempenho atual."
+    }
+  },
+  "filters": {
+    "channels": [
+      "direct",
+      "organic",
+      "others",
+      "paid",
+      "referral",
+      "unknown_privacy"
+    ],
+    "devices": [
+      "desktop",
+      "mobile",
+      "tablet"
+    ],
+    "countries": [
+      "United States",
+      "India",
+      "Canada",
+      "United Kingdom",
+      "France",
+      "Spain",
+      "China",
+      "Taiwan",
+      "Germany",
+      "Italy",
+      "Singapore",
+      "Japan",
+      "South Korea",
+      "Netherlands",
+      "Turkey",
+      "Brazil",
+      "Australia",
+      "Mexico",
+      "Poland",
+      "Indonesia"
+    ]
+  },
+  "pages": [
+    {
+      "id": "executive",
+      "title": {
+        "en": "Executive Growth",
+        "pt": "Crescimento Executivo"
+      },
+      "eyebrow": {
+        "en": "Growth pulse",
+        "pt": "Pulso de crescimento"
+      },
+      "question": {
+        "en": "Where is growth healthy, and where is the funnel leaking?",
+        "pt": "Onde o crescimento está saudável e onde o funil perde usuários?"
+      },
+      "metrics": [
+        {
+          "id": "users",
+          "label": {
+            "en": "Active users",
+            "pt": "Usuários ativos"
+          },
+          "value": 269504.0,
+          "previous": 138438.0,
+          "format": "integer",
+          "improvement": "up"
+        },
+        {
+          "id": "sessions",
+          "label": {
+            "en": "Sessions",
+            "pt": "Sessões"
+          },
+          "value": 358938.0,
+          "previous": 330222.96,
+          "format": "integer",
+          "improvement": "up"
+        },
+        {
+          "id": "conversion",
+          "label": {
+            "en": "User conversion",
+            "pt": "Conversão de usuários"
+          },
+          "value": 0.013777161006886725,
+          "previous": 0.012950531346473521,
+          "format": "percent",
+          "improvement": "up"
+        },
+        {
+          "id": "orders",
+          "label": {
+            "en": "Purchases",
+            "pt": "Compras"
+          },
+          "value": 4466.0,
+          "previous": 2925.0,
+          "format": "integer",
+          "improvement": "up"
+        },
+        {
+          "id": "revenue",
+          "label": {
+            "en": "Tracked revenue",
+            "pt": "Receita rastreada"
+          },
+          "value": 328475.0,
+          "previous": 298912.25,
+          "format": "currency",
+          "improvement": "up"
+        }
+      ],
+      "trendTitle": {
+        "en": "Daily active users",
+        "pt": "Usuários ativos por dia"
+      },
+      "trend": [
+        {
+          "label": "Nov 01",
+          "value": 2360
+        },
+        {
+          "label": "Nov 02",
+          "value": 3254
+        },
+        {
+          "label": "Nov 03",
+          "value": 4641
+        },
+        {
+          "label": "Nov 04",
+          "value": 3731
+        },
+        {
+          "label": "Nov 05",
+          "value": 3268
+        },
+        {
+          "label": "Nov 06",
+          "value": 2812
+        },
+        {
+          "label": "Nov 07",
+          "value": 2000
+        },
+        {
+          "label": "Nov 08",
+          "value": 1915
+        },
+        {
+          "label": "Nov 09",
+          "value": 2802
+        },
+        {
+          "label": "Nov 10",
+          "value": 3256
+        },
+        {
+          "label": "Nov 11",
+          "value": 3287
+        },
+        {
+          "label": "Nov 12",
+          "value": 3175
+        },
+        {
+          "label": "Nov 13",
+          "value": 2857
+        },
+        {
+          "label": "Nov 14",
+          "value": 2070
+        },
+        {
+          "label": "Nov 15",
+          "value": 1953
+        },
+        {
+          "label": "Nov 16",
+          "value": 3080
+        },
+        {
+          "label": "Nov 17",
+          "value": 3443
+        },
+        {
+          "label": "Nov 18",
+          "value": 3498
+        },
+        {
+          "label": "Nov 19",
+          "value": 3560
+        },
+        {
+          "label": "Nov 20",
+          "value": 3474
+        },
+        {
+          "label": "Nov 21",
+          "value": 2751
+        },
+        {
+          "label": "Nov 22",
+          "value": 2352
+        },
+        {
+          "label": "Nov 23",
+          "value": 3415
+        },
+        {
+          "label": "Nov 24",
+          "value": 3800
+        },
+        {
+          "label": "Nov 25",
+          "value": 3965
+        },
+        {
+          "label": "Nov 26",
+          "value": 3620
+        },
+        {
+          "label": "Nov 27",
+          "value": 3500
+        },
+        {
+          "label": "Nov 28",
+          "value": 2996
+        },
+        {
+          "label": "Nov 29",
+          "value": 2872
+        },
+        {
+          "label": "Nov 30",
+          "value": 3959
+        },
+        {
+          "label": "Dec 01",
+          "value": 4295
+        },
+        {
+          "label": "Dec 02",
+          "value": 4097
+        },
+        {
+          "label": "Dec 03",
+          "value": 4460
+        },
+        {
+          "label": "Dec 04",
+          "value": 4126
+        },
+        {
+          "label": "Dec 05",
+          "value": 3079
+        },
+        {
+          "label": "Dec 06",
+          "value": 2948
+        },
+        {
+          "label": "Dec 07",
+          "value": 4705
+        },
+        {
+          "label": "Dec 08",
+          "value": 6681
+        },
+        {
+          "label": "Dec 09",
+          "value": 5525
+        },
+        {
+          "label": "Dec 10",
+          "value": 5226
+        },
+        {
+          "label": "Dec 11",
+          "value": 4941
+        },
+        {
+          "label": "Dec 12",
+          "value": 3744
+        },
+        {
+          "label": "Dec 13",
+          "value": 3400
+        },
+        {
+          "label": "Dec 14",
+          "value": 4549
+        },
+        {
+          "label": "Dec 15",
+          "value": 4982
+        },
+        {
+          "label": "Dec 16",
+          "value": 4814
+        },
+        {
+          "label": "Dec 17",
+          "value": 4705
+        },
+        {
+          "label": "Dec 18",
+          "value": 4254
+        },
+        {
+          "label": "Dec 19",
+          "value": 3231
+        },
+        {
+          "label": "Dec 20",
+          "value": 2964
+        },
+        {
+          "label": "Dec 21",
+          "value": 3615
+        },
+        {
+          "label": "Dec 22",
+          "value": 3400
+        },
+        {
+          "label": "Dec 23",
+          "value": 3115
+        },
+        {
+          "label": "Dec 24",
+          "value": 2595
+        },
+        {
+          "label": "Dec 25",
+          "value": 2489
+        },
+        {
+          "label": "Dec 26",
+          "value": 2468
+        },
+        {
+          "label": "Dec 27",
+          "value": 2492
+        },
+        {
+          "label": "Dec 28",
+          "value": 3037
+        },
+        {
+          "label": "Dec 29",
+          "value": 3116
+        },
+        {
+          "label": "Dec 30",
+          "value": 2946
+        },
+        {
+          "label": "Dec 31",
+          "value": 2428
+        },
+        {
+          "label": "Jan 01",
+          "value": 2155
+        },
+        {
+          "label": "Jan 02",
+          "value": 2575
+        },
+        {
+          "label": "Jan 03",
+          "value": 2574
+        },
+        {
+          "label": "Jan 04",
+          "value": 3062
+        },
+        {
+          "label": "Jan 05",
+          "value": 4074
+        },
+        {
+          "label": "Jan 06",
+          "value": 5472
+        },
+        {
+          "label": "Jan 07",
+          "value": 4157
+        },
+        {
+          "label": "Jan 08",
+          "value": 3787
+        },
+        {
+          "label": "Jan 09",
+          "value": 2949
+        },
+        {
+          "label": "Jan 10",
+          "value": 2765
+        },
+        {
+          "label": "Jan 11",
+          "value": 3597
+        },
+        {
+          "label": "Jan 12",
+          "value": 4176
+        },
+        {
+          "label": "Jan 13",
+          "value": 4090
+        },
+        {
+          "label": "Jan 14",
+          "value": 3895
+        },
+        {
+          "label": "Jan 15",
+          "value": 3536
+        },
+        {
+          "label": "Jan 16",
+          "value": 2882
+        },
+        {
+          "label": "Jan 17",
+          "value": 2707
+        },
+        {
+          "label": "Jan 18",
+          "value": 3214
+        },
+        {
+          "label": "Jan 19",
+          "value": 3706
+        },
+        {
+          "label": "Jan 20",
+          "value": 4189
+        },
+        {
+          "label": "Jan 21",
+          "value": 4188
+        },
+        {
+          "label": "Jan 22",
+          "value": 3593
+        },
+        {
+          "label": "Jan 23",
+          "value": 2813
+        },
+        {
+          "label": "Jan 24",
+          "value": 2686
+        },
+        {
+          "label": "Jan 25",
+          "value": 3493
+        },
+        {
+          "label": "Jan 26",
+          "value": 3576
+        },
+        {
+          "label": "Jan 27",
+          "value": 3983
+        },
+        {
+          "label": "Jan 28",
+          "value": 3709
+        },
+        {
+          "label": "Jan 29",
+          "value": 3369
+        },
+        {
+          "label": "Jan 30",
+          "value": 2582
+        },
+        {
+          "label": "Jan 31",
+          "value": 2517
+        }
+      ],
+      "breakdownTitle": {
+        "en": "Acquisition mix",
+        "pt": "Mix de aquisição"
+      },
+      "breakdown": [
+        {
+          "name": "organic",
+          "value": 112116,
+          "share": 1.01
+        },
+        {
+          "name": "direct",
+          "value": 75763,
+          "share": 1.14
+        },
+        {
+          "name": "referral",
+          "value": 55229,
+          "share": 1.54
+        },
+        {
+          "name": "others",
+          "value": 50984,
+          "share": 0.83
+        },
+        {
+          "name": "unknown_privacy",
+          "value": 17973,
+          "share": 3.17
+        },
+        {
+          "name": "paid",
+          "value": 15515,
+          "share": 0.83
+        }
+      ],
+      "detailTitle": {
+        "en": "Country opportunity detail",
+        "pt": "Detalhe de oportunidade por país"
+      },
+      "detail": [
+        {
+          "name": "United States",
+          "value": 118222,
+          "purchasers": 1619
+        },
+        {
+          "name": "India",
+          "value": 25291,
+          "purchasers": 339
+        },
+        {
+          "name": "Canada",
+          "value": 20220,
+          "purchasers": 298
+        },
+        {
+          "name": "United Kingdom",
+          "value": 8504,
+          "purchasers": 118
+        },
+        {
+          "name": "France",
+          "value": 5368,
+          "purchasers": 84
+        },
+        {
+          "name": "Spain",
+          "value": 5033,
+          "purchasers": 76
+        },
+        {
+          "name": "Germany",
+          "value": 4853,
+          "purchasers": 63
+        },
+        {
+          "name": "China",
+          "value": 4607,
+          "purchasers": 55
+        },
+        {
+          "name": "Taiwan",
+          "value": 4558,
+          "purchasers": 59
+        },
+        {
+          "name": "Italy",
+          "value": 3738,
+          "purchasers": 43
+        },
+        {
+          "name": "Singapore",
+          "value": 3590,
+          "purchasers": 42
+        },
+        {
+          "name": "Japan",
+          "value": 3542,
+          "purchasers": 59
+        }
+      ],
+      "finding": {
+        "en": "Conversion is concentrated in a narrow share of active users; channel quality matters more than raw traffic.",
+        "pt": "A conversão está concentrada em uma pequena parcela dos usuários ativos; qualidade do canal importa mais que tráfego bruto."
+      },
+      "action": {
+        "en": "Shift budget tests toward channels with repeatable purchase intent and validate tracking before scaling.",
+        "pt": "Direcione testes de orçamento para canais com intenção de compra recorrente e valide o rastreamento antes de escalar."
+      }
+    },
+    {
+      "id": "funnel",
+      "title": {
+        "en": "Funnel & Journey",
+        "pt": "Funil e Jornada"
+      },
+      "eyebrow": {
+        "en": "Behavior path",
+        "pt": "Caminho comportamental"
+      },
+      "question": {
+        "en": "At which behavior step does purchase intent collapse?",
+        "pt": "Em qual etapa comportamental a intenção de compra desaba?"
+      },
+      "metrics": [
+        {
+          "id": "users",
+          "label": {
+            "en": "Active users",
+            "pt": "Usuários ativos"
+          },
+          "value": 269504.0,
+          "previous": 138438.0,
+          "format": "integer",
+          "improvement": "up"
+        },
+        {
+          "id": "sessions",
+          "label": {
+            "en": "Sessions",
+            "pt": "Sessões"
+          },
+          "value": 358938.0,
+          "previous": 330222.96,
+          "format": "integer",
+          "improvement": "up"
+        },
+        {
+          "id": "conversion",
+          "label": {
+            "en": "User conversion",
+            "pt": "Conversão de usuários"
+          },
+          "value": 0.013777161006886725,
+          "previous": 0.012950531346473521,
+          "format": "percent",
+          "improvement": "up"
+        },
+        {
+          "id": "orders",
+          "label": {
+            "en": "Purchases",
+            "pt": "Compras"
+          },
+          "value": 4466.0,
+          "previous": 2925.0,
+          "format": "integer",
+          "improvement": "up"
+        }
+      ],
+      "trendTitle": {
+        "en": "Journey volume",
+        "pt": "Volume da jornada"
+      },
+      "trend": [
+        {
+          "label": "Nov 01",
+          "value": 2360
+        },
+        {
+          "label": "Nov 02",
+          "value": 3254
+        },
+        {
+          "label": "Nov 03",
+          "value": 4641
+        },
+        {
+          "label": "Nov 04",
+          "value": 3731
+        },
+        {
+          "label": "Nov 05",
+          "value": 3268
+        },
+        {
+          "label": "Nov 06",
+          "value": 2812
+        },
+        {
+          "label": "Nov 07",
+          "value": 2000
+        },
+        {
+          "label": "Nov 08",
+          "value": 1915
+        },
+        {
+          "label": "Nov 09",
+          "value": 2802
+        },
+        {
+          "label": "Nov 10",
+          "value": 3256
+        },
+        {
+          "label": "Nov 11",
+          "value": 3287
+        },
+        {
+          "label": "Nov 12",
+          "value": 3175
+        },
+        {
+          "label": "Nov 13",
+          "value": 2857
+        },
+        {
+          "label": "Nov 14",
+          "value": 2070
+        },
+        {
+          "label": "Nov 15",
+          "value": 1953
+        },
+        {
+          "label": "Nov 16",
+          "value": 3080
+        },
+        {
+          "label": "Nov 17",
+          "value": 3443
+        },
+        {
+          "label": "Nov 18",
+          "value": 3498
+        },
+        {
+          "label": "Nov 19",
+          "value": 3560
+        },
+        {
+          "label": "Nov 20",
+          "value": 3474
+        },
+        {
+          "label": "Nov 21",
+          "value": 2751
+        },
+        {
+          "label": "Nov 22",
+          "value": 2352
+        },
+        {
+          "label": "Nov 23",
+          "value": 3415
+        },
+        {
+          "label": "Nov 24",
+          "value": 3800
+        },
+        {
+          "label": "Nov 25",
+          "value": 3965
+        },
+        {
+          "label": "Nov 26",
+          "value": 3620
+        },
+        {
+          "label": "Nov 27",
+          "value": 3500
+        },
+        {
+          "label": "Nov 28",
+          "value": 2996
+        },
+        {
+          "label": "Nov 29",
+          "value": 2872
+        },
+        {
+          "label": "Nov 30",
+          "value": 3959
+        },
+        {
+          "label": "Dec 01",
+          "value": 4295
+        },
+        {
+          "label": "Dec 02",
+          "value": 4097
+        },
+        {
+          "label": "Dec 03",
+          "value": 4460
+        },
+        {
+          "label": "Dec 04",
+          "value": 4126
+        },
+        {
+          "label": "Dec 05",
+          "value": 3079
+        },
+        {
+          "label": "Dec 06",
+          "value": 2948
+        },
+        {
+          "label": "Dec 07",
+          "value": 4705
+        },
+        {
+          "label": "Dec 08",
+          "value": 6681
+        },
+        {
+          "label": "Dec 09",
+          "value": 5525
+        },
+        {
+          "label": "Dec 10",
+          "value": 5226
+        },
+        {
+          "label": "Dec 11",
+          "value": 4941
+        },
+        {
+          "label": "Dec 12",
+          "value": 3744
+        },
+        {
+          "label": "Dec 13",
+          "value": 3400
+        },
+        {
+          "label": "Dec 14",
+          "value": 4549
+        },
+        {
+          "label": "Dec 15",
+          "value": 4982
+        },
+        {
+          "label": "Dec 16",
+          "value": 4814
+        },
+        {
+          "label": "Dec 17",
+          "value": 4705
+        },
+        {
+          "label": "Dec 18",
+          "value": 4254
+        },
+        {
+          "label": "Dec 19",
+          "value": 3231
+        },
+        {
+          "label": "Dec 20",
+          "value": 2964
+        },
+        {
+          "label": "Dec 21",
+          "value": 3615
+        },
+        {
+          "label": "Dec 22",
+          "value": 3400
+        },
+        {
+          "label": "Dec 23",
+          "value": 3115
+        },
+        {
+          "label": "Dec 24",
+          "value": 2595
+        },
+        {
+          "label": "Dec 25",
+          "value": 2489
+        },
+        {
+          "label": "Dec 26",
+          "value": 2468
+        },
+        {
+          "label": "Dec 27",
+          "value": 2492
+        },
+        {
+          "label": "Dec 28",
+          "value": 3037
+        },
+        {
+          "label": "Dec 29",
+          "value": 3116
+        },
+        {
+          "label": "Dec 30",
+          "value": 2946
+        },
+        {
+          "label": "Dec 31",
+          "value": 2428
+        },
+        {
+          "label": "Jan 01",
+          "value": 2155
+        },
+        {
+          "label": "Jan 02",
+          "value": 2575
+        },
+        {
+          "label": "Jan 03",
+          "value": 2574
+        },
+        {
+          "label": "Jan 04",
+          "value": 3062
+        },
+        {
+          "label": "Jan 05",
+          "value": 4074
+        },
+        {
+          "label": "Jan 06",
+          "value": 5472
+        },
+        {
+          "label": "Jan 07",
+          "value": 4157
+        },
+        {
+          "label": "Jan 08",
+          "value": 3787
+        },
+        {
+          "label": "Jan 09",
+          "value": 2949
+        },
+        {
+          "label": "Jan 10",
+          "value": 2765
+        },
+        {
+          "label": "Jan 11",
+          "value": 3597
+        },
+        {
+          "label": "Jan 12",
+          "value": 4176
+        },
+        {
+          "label": "Jan 13",
+          "value": 4090
+        },
+        {
+          "label": "Jan 14",
+          "value": 3895
+        },
+        {
+          "label": "Jan 15",
+          "value": 3536
+        },
+        {
+          "label": "Jan 16",
+          "value": 2882
+        },
+        {
+          "label": "Jan 17",
+          "value": 2707
+        },
+        {
+          "label": "Jan 18",
+          "value": 3214
+        },
+        {
+          "label": "Jan 19",
+          "value": 3706
+        },
+        {
+          "label": "Jan 20",
+          "value": 4189
+        },
+        {
+          "label": "Jan 21",
+          "value": 4188
+        },
+        {
+          "label": "Jan 22",
+          "value": 3593
+        },
+        {
+          "label": "Jan 23",
+          "value": 2813
+        },
+        {
+          "label": "Jan 24",
+          "value": 2686
+        },
+        {
+          "label": "Jan 25",
+          "value": 3493
+        },
+        {
+          "label": "Jan 26",
+          "value": 3576
+        },
+        {
+          "label": "Jan 27",
+          "value": 3983
+        },
+        {
+          "label": "Jan 28",
+          "value": 3709
+        },
+        {
+          "label": "Jan 29",
+          "value": 3369
+        },
+        {
+          "label": "Jan 30",
+          "value": 2582
+        },
+        {
+          "label": "Jan 31",
+          "value": 2517
+        }
+      ],
+      "breakdownTitle": {
+        "en": "Event progression",
+        "pt": "Progressão de eventos"
+      },
+      "breakdown": [
+        {
+          "name": "user_engagement",
+          "value": 1058721
+        },
+        {
+          "name": "view_item",
+          "value": 386068
+        },
+        {
+          "name": "session_start",
+          "value": 354970
+        },
+        {
+          "name": "first_visit",
+          "value": 257462
+        },
+        {
+          "name": "add_to_cart",
+          "value": 58543
+        },
+        {
+          "name": "begin_checkout",
+          "value": 38757
+        },
+        {
+          "name": "select_item",
+          "value": 31007
+        },
+        {
+          "name": "view_search_results",
+          "value": 26172
+        },
+        {
+          "name": "add_shipping_info",
+          "value": 19722
+        },
+        {
+          "name": "add_payment_info",
+          "value": 13899
+        },
+        {
+          "name": "purchase",
+          "value": 5692
+        },
+        {
+          "name": "view_item_list",
+          "value": 71
+        }
+      ],
+      "detailTitle": {
+        "en": "Funnel stage detail",
+        "pt": "Detalhe das etapas do funil"
+      },
+      "detail": [
+        {
+          "stage": "session_start",
+          "users": 267116,
+          "reach_pct": 99.1
+        },
+        {
+          "stage": "view_item",
+          "users": 61252,
+          "reach_pct": 22.7
+        },
+        {
+          "stage": "add_to_cart",
+          "users": 12545,
+          "reach_pct": 4.7
+        },
+        {
+          "stage": "begin_checkout",
+          "users": 9715,
+          "reach_pct": 3.6
+        },
+        {
+          "stage": "purchase",
+          "users": 4419,
+          "reach_pct": 1.6
+        }
+      ],
+      "finding": {
+        "en": "The largest decision gap appears before checkout rather than at payment completion.",
+        "pt": "A maior lacuna de decisão aparece antes do checkout, e não na conclusão do pagamento."
+      },
+      "action": {
+        "en": "Instrument product-view to cart transitions and test clearer product-level calls to action.",
+        "pt": "Instrumente a transição de visualização para carrinho e teste chamadas para ação mais claras nos produtos."
+      }
+    },
+    {
+      "id": "acquisition",
+      "title": {
+        "en": "Acquisition Quality",
+        "pt": "Qualidade de Aquisição"
+      },
+      "eyebrow": {
+        "en": "Channel economics",
+        "pt": "Economia dos canais"
+      },
+      "question": {
+        "en": "Which channels bring qualified behavior instead of superficial visits?",
+        "pt": "Quais canais trazem comportamento qualificado em vez de visitas superficiais?"
+      },
+      "metrics": [
+        {
+          "id": "users",
+          "label": {
+            "en": "Active users",
+            "pt": "Usuários ativos"
+          },
+          "value": 269504.0,
+          "previous": 138438.0,
+          "format": "integer",
+          "improvement": "up"
+        },
+        {
+          "id": "sessions",
+          "label": {
+            "en": "Sessions",
+            "pt": "Sessões"
+          },
+          "value": 358938.0,
+          "previous": 330222.96,
+          "format": "integer",
+          "improvement": "up"
+        },
+        {
+          "id": "conversion",
+          "label": {
+            "en": "User conversion",
+            "pt": "Conversão de usuários"
+          },
+          "value": 0.013777161006886725,
+          "previous": 0.012950531346473521,
+          "format": "percent",
+          "improvement": "up"
+        },
+        {
+          "id": "orders",
+          "label": {
+            "en": "Purchases",
+            "pt": "Compras"
+          },
+          "value": 4466.0,
+          "previous": 2925.0,
+          "format": "integer",
+          "improvement": "up"
+        }
+      ],
+      "trendTitle": {
+        "en": "Qualified users over time",
+        "pt": "Usuários qualificados ao longo do tempo"
+      },
+      "trend": [
+        {
+          "label": "Nov 01",
+          "value": 2360
+        },
+        {
+          "label": "Nov 02",
+          "value": 3254
+        },
+        {
+          "label": "Nov 03",
+          "value": 4641
+        },
+        {
+          "label": "Nov 04",
+          "value": 3731
+        },
+        {
+          "label": "Nov 05",
+          "value": 3268
+        },
+        {
+          "label": "Nov 06",
+          "value": 2812
+        },
+        {
+          "label": "Nov 07",
+          "value": 2000
+        },
+        {
+          "label": "Nov 08",
+          "value": 1915
+        },
+        {
+          "label": "Nov 09",
+          "value": 2802
+        },
+        {
+          "label": "Nov 10",
+          "value": 3256
+        },
+        {
+          "label": "Nov 11",
+          "value": 3287
+        },
+        {
+          "label": "Nov 12",
+          "value": 3175
+        },
+        {
+          "label": "Nov 13",
+          "value": 2857
+        },
+        {
+          "label": "Nov 14",
+          "value": 2070
+        },
+        {
+          "label": "Nov 15",
+          "value": 1953
+        },
+        {
+          "label": "Nov 16",
+          "value": 3080
+        },
+        {
+          "label": "Nov 17",
+          "value": 3443
+        },
+        {
+          "label": "Nov 18",
+          "value": 3498
+        },
+        {
+          "label": "Nov 19",
+          "value": 3560
+        },
+        {
+          "label": "Nov 20",
+          "value": 3474
+        },
+        {
+          "label": "Nov 21",
+          "value": 2751
+        },
+        {
+          "label": "Nov 22",
+          "value": 2352
+        },
+        {
+          "label": "Nov 23",
+          "value": 3415
+        },
+        {
+          "label": "Nov 24",
+          "value": 3800
+        },
+        {
+          "label": "Nov 25",
+          "value": 3965
+        },
+        {
+          "label": "Nov 26",
+          "value": 3620
+        },
+        {
+          "label": "Nov 27",
+          "value": 3500
+        },
+        {
+          "label": "Nov 28",
+          "value": 2996
+        },
+        {
+          "label": "Nov 29",
+          "value": 2872
+        },
+        {
+          "label": "Nov 30",
+          "value": 3959
+        },
+        {
+          "label": "Dec 01",
+          "value": 4295
+        },
+        {
+          "label": "Dec 02",
+          "value": 4097
+        },
+        {
+          "label": "Dec 03",
+          "value": 4460
+        },
+        {
+          "label": "Dec 04",
+          "value": 4126
+        },
+        {
+          "label": "Dec 05",
+          "value": 3079
+        },
+        {
+          "label": "Dec 06",
+          "value": 2948
+        },
+        {
+          "label": "Dec 07",
+          "value": 4705
+        },
+        {
+          "label": "Dec 08",
+          "value": 6681
+        },
+        {
+          "label": "Dec 09",
+          "value": 5525
+        },
+        {
+          "label": "Dec 10",
+          "value": 5226
+        },
+        {
+          "label": "Dec 11",
+          "value": 4941
+        },
+        {
+          "label": "Dec 12",
+          "value": 3744
+        },
+        {
+          "label": "Dec 13",
+          "value": 3400
+        },
+        {
+          "label": "Dec 14",
+          "value": 4549
+        },
+        {
+          "label": "Dec 15",
+          "value": 4982
+        },
+        {
+          "label": "Dec 16",
+          "value": 4814
+        },
+        {
+          "label": "Dec 17",
+          "value": 4705
+        },
+        {
+          "label": "Dec 18",
+          "value": 4254
+        },
+        {
+          "label": "Dec 19",
+          "value": 3231
+        },
+        {
+          "label": "Dec 20",
+          "value": 2964
+        },
+        {
+          "label": "Dec 21",
+          "value": 3615
+        },
+        {
+          "label": "Dec 22",
+          "value": 3400
+        },
+        {
+          "label": "Dec 23",
+          "value": 3115
+        },
+        {
+          "label": "Dec 24",
+          "value": 2595
+        },
+        {
+          "label": "Dec 25",
+          "value": 2489
+        },
+        {
+          "label": "Dec 26",
+          "value": 2468
+        },
+        {
+          "label": "Dec 27",
+          "value": 2492
+        },
+        {
+          "label": "Dec 28",
+          "value": 3037
+        },
+        {
+          "label": "Dec 29",
+          "value": 3116
+        },
+        {
+          "label": "Dec 30",
+          "value": 2946
+        },
+        {
+          "label": "Dec 31",
+          "value": 2428
+        },
+        {
+          "label": "Jan 01",
+          "value": 2155
+        },
+        {
+          "label": "Jan 02",
+          "value": 2575
+        },
+        {
+          "label": "Jan 03",
+          "value": 2574
+        },
+        {
+          "label": "Jan 04",
+          "value": 3062
+        },
+        {
+          "label": "Jan 05",
+          "value": 4074
+        },
+        {
+          "label": "Jan 06",
+          "value": 5472
+        },
+        {
+          "label": "Jan 07",
+          "value": 4157
+        },
+        {
+          "label": "Jan 08",
+          "value": 3787
+        },
+        {
+          "label": "Jan 09",
+          "value": 2949
+        },
+        {
+          "label": "Jan 10",
+          "value": 2765
+        },
+        {
+          "label": "Jan 11",
+          "value": 3597
+        },
+        {
+          "label": "Jan 12",
+          "value": 4176
+        },
+        {
+          "label": "Jan 13",
+          "value": 4090
+        },
+        {
+          "label": "Jan 14",
+          "value": 3895
+        },
+        {
+          "label": "Jan 15",
+          "value": 3536
+        },
+        {
+          "label": "Jan 16",
+          "value": 2882
+        },
+        {
+          "label": "Jan 17",
+          "value": 2707
+        },
+        {
+          "label": "Jan 18",
+          "value": 3214
+        },
+        {
+          "label": "Jan 19",
+          "value": 3706
+        },
+        {
+          "label": "Jan 20",
+          "value": 4189
+        },
+        {
+          "label": "Jan 21",
+          "value": 4188
+        },
+        {
+          "label": "Jan 22",
+          "value": 3593
+        },
+        {
+          "label": "Jan 23",
+          "value": 2813
+        },
+        {
+          "label": "Jan 24",
+          "value": 2686
+        },
+        {
+          "label": "Jan 25",
+          "value": 3493
+        },
+        {
+          "label": "Jan 26",
+          "value": 3576
+        },
+        {
+          "label": "Jan 27",
+          "value": 3983
+        },
+        {
+          "label": "Jan 28",
+          "value": 3709
+        },
+        {
+          "label": "Jan 29",
+          "value": 3369
+        },
+        {
+          "label": "Jan 30",
+          "value": 2582
+        },
+        {
+          "label": "Jan 31",
+          "value": 2517
+        }
+      ],
+      "breakdownTitle": {
+        "en": "Users by channel",
+        "pt": "Usuários por canal"
+      },
+      "breakdown": [
+        {
+          "name": "organic",
+          "value": 112116,
+          "share": 1.01
+        },
+        {
+          "name": "direct",
+          "value": 75763,
+          "share": 1.14
+        },
+        {
+          "name": "referral",
+          "value": 55229,
+          "share": 1.54
+        },
+        {
+          "name": "others",
+          "value": 50984,
+          "share": 0.83
+        },
+        {
+          "name": "unknown_privacy",
+          "value": 17973,
+          "share": 3.17
+        },
+        {
+          "name": "paid",
+          "value": 15515,
+          "share": 0.83
+        }
+      ],
+      "detailTitle": {
+        "en": "Channel quality detail",
+        "pt": "Detalhe de qualidade dos canais"
+      },
+      "detail": [
+        {
+          "name": "organic",
+          "value": 112116,
+          "share": 1.01
+        },
+        {
+          "name": "direct",
+          "value": 75763,
+          "share": 1.14
+        },
+        {
+          "name": "referral",
+          "value": 55229,
+          "share": 1.54
+        },
+        {
+          "name": "others",
+          "value": 50984,
+          "share": 0.83
+        },
+        {
+          "name": "unknown_privacy",
+          "value": 17973,
+          "share": 3.17
+        },
+        {
+          "name": "paid",
+          "value": 15515,
+          "share": 0.83
+        }
+      ],
+      "finding": {
+        "en": "Traffic volume and conversion propensity do not move together across channels.",
+        "pt": "Volume de tráfego e propensão à conversão não caminham juntos entre os canais."
+      },
+      "action": {
+        "en": "Evaluate acquisition on purchase progression and engagement, not sessions alone.",
+        "pt": "Avalie aquisição pela progressão até a compra e engajamento, não apenas por sessões."
+      }
+    },
+    {
+      "id": "products",
+      "title": {
+        "en": "Product Performance",
+        "pt": "Desempenho de Produtos"
+      },
+      "eyebrow": {
+        "en": "Merchandising signal",
+        "pt": "Sinal de merchandising"
+      },
+      "question": {
+        "en": "Which product groups translate attention into tracked revenue?",
+        "pt": "Quais grupos de produtos transformam atenção em receita rastreada?"
+      },
+      "metrics": [
+        {
+          "id": "conversion",
+          "label": {
+            "en": "User conversion",
+            "pt": "Conversão de usuários"
+          },
+          "value": 0.013777161006886725,
+          "previous": 0.012950531346473521,
+          "format": "percent",
+          "improvement": "up"
+        },
+        {
+          "id": "orders",
+          "label": {
+            "en": "Purchases",
+            "pt": "Compras"
+          },
+          "value": 4466.0,
+          "previous": 2925.0,
+          "format": "integer",
+          "improvement": "up"
+        },
+        {
+          "id": "revenue",
+          "label": {
+            "en": "Tracked revenue",
+            "pt": "Receita rastreada"
+          },
+          "value": 328475.0,
+          "previous": 298912.25,
+          "format": "currency",
+          "improvement": "up"
+        }
+      ],
+      "trendTitle": {
+        "en": "Demand signal",
+        "pt": "Sinal de demanda"
+      },
+      "trend": [
+        {
+          "label": "Nov 01",
+          "value": 2360
+        },
+        {
+          "label": "Nov 02",
+          "value": 3254
+        },
+        {
+          "label": "Nov 03",
+          "value": 4641
+        },
+        {
+          "label": "Nov 04",
+          "value": 3731
+        },
+        {
+          "label": "Nov 05",
+          "value": 3268
+        },
+        {
+          "label": "Nov 06",
+          "value": 2812
+        },
+        {
+          "label": "Nov 07",
+          "value": 2000
+        },
+        {
+          "label": "Nov 08",
+          "value": 1915
+        },
+        {
+          "label": "Nov 09",
+          "value": 2802
+        },
+        {
+          "label": "Nov 10",
+          "value": 3256
+        },
+        {
+          "label": "Nov 11",
+          "value": 3287
+        },
+        {
+          "label": "Nov 12",
+          "value": 3175
+        },
+        {
+          "label": "Nov 13",
+          "value": 2857
+        },
+        {
+          "label": "Nov 14",
+          "value": 2070
+        },
+        {
+          "label": "Nov 15",
+          "value": 1953
+        },
+        {
+          "label": "Nov 16",
+          "value": 3080
+        },
+        {
+          "label": "Nov 17",
+          "value": 3443
+        },
+        {
+          "label": "Nov 18",
+          "value": 3498
+        },
+        {
+          "label": "Nov 19",
+          "value": 3560
+        },
+        {
+          "label": "Nov 20",
+          "value": 3474
+        },
+        {
+          "label": "Nov 21",
+          "value": 2751
+        },
+        {
+          "label": "Nov 22",
+          "value": 2352
+        },
+        {
+          "label": "Nov 23",
+          "value": 3415
+        },
+        {
+          "label": "Nov 24",
+          "value": 3800
+        },
+        {
+          "label": "Nov 25",
+          "value": 3965
+        },
+        {
+          "label": "Nov 26",
+          "value": 3620
+        },
+        {
+          "label": "Nov 27",
+          "value": 3500
+        },
+        {
+          "label": "Nov 28",
+          "value": 2996
+        },
+        {
+          "label": "Nov 29",
+          "value": 2872
+        },
+        {
+          "label": "Nov 30",
+          "value": 3959
+        },
+        {
+          "label": "Dec 01",
+          "value": 4295
+        },
+        {
+          "label": "Dec 02",
+          "value": 4097
+        },
+        {
+          "label": "Dec 03",
+          "value": 4460
+        },
+        {
+          "label": "Dec 04",
+          "value": 4126
+        },
+        {
+          "label": "Dec 05",
+          "value": 3079
+        },
+        {
+          "label": "Dec 06",
+          "value": 2948
+        },
+        {
+          "label": "Dec 07",
+          "value": 4705
+        },
+        {
+          "label": "Dec 08",
+          "value": 6681
+        },
+        {
+          "label": "Dec 09",
+          "value": 5525
+        },
+        {
+          "label": "Dec 10",
+          "value": 5226
+        },
+        {
+          "label": "Dec 11",
+          "value": 4941
+        },
+        {
+          "label": "Dec 12",
+          "value": 3744
+        },
+        {
+          "label": "Dec 13",
+          "value": 3400
+        },
+        {
+          "label": "Dec 14",
+          "value": 4549
+        },
+        {
+          "label": "Dec 15",
+          "value": 4982
+        },
+        {
+          "label": "Dec 16",
+          "value": 4814
+        },
+        {
+          "label": "Dec 17",
+          "value": 4705
+        },
+        {
+          "label": "Dec 18",
+          "value": 4254
+        },
+        {
+          "label": "Dec 19",
+          "value": 3231
+        },
+        {
+          "label": "Dec 20",
+          "value": 2964
+        },
+        {
+          "label": "Dec 21",
+          "value": 3615
+        },
+        {
+          "label": "Dec 22",
+          "value": 3400
+        },
+        {
+          "label": "Dec 23",
+          "value": 3115
+        },
+        {
+          "label": "Dec 24",
+          "value": 2595
+        },
+        {
+          "label": "Dec 25",
+          "value": 2489
+        },
+        {
+          "label": "Dec 26",
+          "value": 2468
+        },
+        {
+          "label": "Dec 27",
+          "value": 2492
+        },
+        {
+          "label": "Dec 28",
+          "value": 3037
+        },
+        {
+          "label": "Dec 29",
+          "value": 3116
+        },
+        {
+          "label": "Dec 30",
+          "value": 2946
+        },
+        {
+          "label": "Dec 31",
+          "value": 2428
+        },
+        {
+          "label": "Jan 01",
+          "value": 2155
+        },
+        {
+          "label": "Jan 02",
+          "value": 2575
+        },
+        {
+          "label": "Jan 03",
+          "value": 2574
+        },
+        {
+          "label": "Jan 04",
+          "value": 3062
+        },
+        {
+          "label": "Jan 05",
+          "value": 4074
+        },
+        {
+          "label": "Jan 06",
+          "value": 5472
+        },
+        {
+          "label": "Jan 07",
+          "value": 4157
+        },
+        {
+          "label": "Jan 08",
+          "value": 3787
+        },
+        {
+          "label": "Jan 09",
+          "value": 2949
+        },
+        {
+          "label": "Jan 10",
+          "value": 2765
+        },
+        {
+          "label": "Jan 11",
+          "value": 3597
+        },
+        {
+          "label": "Jan 12",
+          "value": 4176
+        },
+        {
+          "label": "Jan 13",
+          "value": 4090
+        },
+        {
+          "label": "Jan 14",
+          "value": 3895
+        },
+        {
+          "label": "Jan 15",
+          "value": 3536
+        },
+        {
+          "label": "Jan 16",
+          "value": 2882
+        },
+        {
+          "label": "Jan 17",
+          "value": 2707
+        },
+        {
+          "label": "Jan 18",
+          "value": 3214
+        },
+        {
+          "label": "Jan 19",
+          "value": 3706
+        },
+        {
+          "label": "Jan 20",
+          "value": 4189
+        },
+        {
+          "label": "Jan 21",
+          "value": 4188
+        },
+        {
+          "label": "Jan 22",
+          "value": 3593
+        },
+        {
+          "label": "Jan 23",
+          "value": 2813
+        },
+        {
+          "label": "Jan 24",
+          "value": 2686
+        },
+        {
+          "label": "Jan 25",
+          "value": 3493
+        },
+        {
+          "label": "Jan 26",
+          "value": 3576
+        },
+        {
+          "label": "Jan 27",
+          "value": 3983
+        },
+        {
+          "label": "Jan 28",
+          "value": 3709
+        },
+        {
+          "label": "Jan 29",
+          "value": 3369
+        },
+        {
+          "label": "Jan 30",
+          "value": 2582
+        },
+        {
+          "label": "Jan 31",
+          "value": 2517
+        }
+      ],
+      "breakdownTitle": {
+        "en": "Revenue by product group",
+        "pt": "Receita por grupo de produtos"
+      },
+      "breakdown": [
+        {
+          "name": "others",
+          "value": 78418.0,
+          "units": 7244
+        },
+        {
+          "name": "t-shirt",
+          "value": 42685.0,
+          "units": 2289
+        },
+        {
+          "name": "hoodie",
+          "value": 39411.0,
+          "units": 917
+        },
+        {
+          "name": "sweatshirt",
+          "value": 38606.0,
+          "units": 836
+        },
+        {
+          "name": "outerwear",
+          "value": 30025.0,
+          "units": 434
+        },
+        {
+          "name": "drinkware",
+          "value": 27991.0,
+          "units": 1793
+        },
+        {
+          "name": "bags",
+          "value": 27496.0,
+          "units": 1748
+        },
+        {
+          "name": "headwear",
+          "value": 16587.0,
+          "units": 1190
+        },
+        {
+          "name": "stationery",
+          "value": 11589.0,
+          "units": 1272
+        },
+        {
+          "name": "socks",
+          "value": 7273.0,
+          "units": 529
+        },
+        {
+          "name": "stickers",
+          "value": 3333.0,
+          "units": 1989
+        },
+        {
+          "name": "onesie",
+          "value": 2989.0,
+          "units": 172
+        },
+        {
+          "name": "pin",
+          "value": 1622.0,
+          "units": 351
+        },
+        {
+          "name": "gift cards",
+          "value": 450.0,
+          "units": 12
+        }
+      ],
+      "detailTitle": {
+        "en": "Product opportunity detail",
+        "pt": "Detalhe de oportunidade de produto"
+      },
+      "detail": [
+        {
+          "product": "Google Zip Hoodie F/C",
+          "category": "hoodie",
+          "revenue": 11124.0,
+          "units": 221,
+          "orders": 187
+        },
+        {
+          "product": "Google Crewneck Sweatshirt Navy",
+          "category": "sweatshirt",
+          "revenue": 10714.0,
+          "units": 236,
+          "orders": 196
+        },
+        {
+          "product": "Google Badge Heavyweight Pullover Black",
+          "category": "sweatshirt",
+          "revenue": 9518.0,
+          "units": 197,
+          "orders": 150
+        },
+        {
+          "product": "Google Men's Tech Fleece Grey",
+          "category": "others",
+          "revenue": 9182.0,
+          "units": 124,
+          "orders": 87
+        },
+        {
+          "product": "Super G Unisex Joggers",
+          "category": "others",
+          "revenue": 8267.0,
+          "units": 266,
+          "orders": 221
+        },
+        {
+          "product": "Google Crewneck Sweatshirt Green",
+          "category": "sweatshirt",
+          "revenue": 7898.0,
+          "units": 173,
+          "orders": 146
+        },
+        {
+          "product": "Google Men's Puff Jacket Black",
+          "category": "outerwear",
+          "revenue": 5658.0,
+          "units": 59,
+          "orders": 52
+        },
+        {
+          "product": "Google Men's Tech Fleece Vest Charcoal",
+          "category": "outerwear",
+          "revenue": 5422.0,
+          "units": 82,
+          "orders": 62
+        },
+        {
+          "product": "Google Sherpa Zip Hoodie Charcoal",
+          "category": "hoodie",
+          "revenue": 5226.0,
+          "units": 94,
+          "orders": 78
+        },
+        {
+          "product": "Google Canteen Bottle Black",
+          "category": "drinkware",
+          "revenue": 5038.0,
+          "units": 257,
+          "orders": 130
+        },
+        {
+          "product": "Google Utility BackPack",
+          "category": "bags",
+          "revenue": 4968.0,
+          "units": 50,
+          "orders": 47
+        },
+        {
+          "product": "Android Iconic Crewneck Sweatshirt",
+          "category": "sweatshirt",
+          "revenue": 4895.0,
+          "units": 107,
+          "orders": 94
+        },
+        {
+          "product": "Google Black Cloud Zip Hoodie",
+          "category": "hoodie",
+          "revenue": 4677.0,
+          "units": 83,
+          "orders": 53
+        },
+        {
+          "product": "Google Women's Puff Jacket Black",
+          "category": "outerwear",
+          "revenue": 4577.0,
+          "units": 49,
+          "orders": 43
+        },
+        {
+          "product": "Google F/C Longsleeve Charcoal",
+          "category": "others",
+          "revenue": 4410.0,
+          "units": 175,
+          "orders": 118
+        },
+        {
+          "product": "Google Crewneck Sweatshirt Grey",
+          "category": "sweatshirt",
+          "revenue": 4323.0,
+          "units": 95,
+          "orders": 74
+        },
+        {
+          "product": "Google Red Speckled Tee",
+          "category": "t-shirt",
+          "revenue": 4308.0,
+          "units": 172,
+          "orders": 138
+        },
+        {
+          "product": "Google Navy Speckled Tee",
+          "category": "t-shirt",
+          "revenue": 4134.0,
+          "units": 166,
+          "orders": 123
+        },
+        {
+          "product": "Google Campus Bike",
+          "category": "others",
+          "revenue": 4064.0,
+          "units": 123,
+          "orders": 97
+        },
+        {
+          "product": "Google Incognito Techpack V2",
+          "category": "bags",
+          "revenue": 3910.0,
+          "units": 52,
+          "orders": 36
+        }
+      ],
+      "finding": {
+        "en": "A small set of product groups captures most tracked purchase value.",
+        "pt": "Um pequeno conjunto de grupos de produtos concentra a maior parte do valor de compra rastreado."
+      },
+      "action": {
+        "en": "Prioritize discovery and landing-page tests for high-intent groups while monitoring concentration risk.",
+        "pt": "Priorize testes de descoberta e landing pages para grupos de alta intenção, monitorando o risco de concentração."
+      }
+    },
+    {
+      "id": "retention",
+      "title": {
+        "en": "Cohorts & Retention",
+        "pt": "Coortes e Retenção"
+      },
+      "eyebrow": {
+        "en": "Return behavior",
+        "pt": "Comportamento de retorno"
+      },
+      "question": {
+        "en": "Do acquired users return, or does growth depend on replacement traffic?",
+        "pt": "Usuários adquiridos retornam ou o crescimento depende de tráfego de reposição?"
+      },
+      "metrics": [
+        {
+          "id": "return",
+          "label": {
+            "en": "Multi-day users",
+            "pt": "Usuários em vários dias"
+          },
+          "value": 0.1096718416053194,
+          "previous": 0.09870465744478746,
+          "format": "percent",
+          "improvement": "up"
+        },
+        {
+          "id": "users",
+          "label": {
+            "en": "Active users",
+            "pt": "Usuários ativos"
+          },
+          "value": 269504.0,
+          "previous": 138438.0,
+          "format": "integer",
+          "improvement": "up"
+        },
+        {
+          "id": "sessions",
+          "label": {
+            "en": "Sessions",
+            "pt": "Sessões"
+          },
+          "value": 358938.0,
+          "previous": 330222.96,
+          "format": "integer",
+          "improvement": "up"
+        },
+        {
+          "id": "conversion",
+          "label": {
+            "en": "User conversion",
+            "pt": "Conversão de usuários"
+          },
+          "value": 0.013777161006886725,
+          "previous": 0.012950531346473521,
+          "format": "percent",
+          "improvement": "up"
+        }
+      ],
+      "trendTitle": {
+        "en": "Returning activity",
+        "pt": "Atividade de retorno"
+      },
+      "trend": [
+        {
+          "label": "Nov 01",
+          "value": 2360
+        },
+        {
+          "label": "Nov 02",
+          "value": 3254
+        },
+        {
+          "label": "Nov 03",
+          "value": 4641
+        },
+        {
+          "label": "Nov 04",
+          "value": 3731
+        },
+        {
+          "label": "Nov 05",
+          "value": 3268
+        },
+        {
+          "label": "Nov 06",
+          "value": 2812
+        },
+        {
+          "label": "Nov 07",
+          "value": 2000
+        },
+        {
+          "label": "Nov 08",
+          "value": 1915
+        },
+        {
+          "label": "Nov 09",
+          "value": 2802
+        },
+        {
+          "label": "Nov 10",
+          "value": 3256
+        },
+        {
+          "label": "Nov 11",
+          "value": 3287
+        },
+        {
+          "label": "Nov 12",
+          "value": 3175
+        },
+        {
+          "label": "Nov 13",
+          "value": 2857
+        },
+        {
+          "label": "Nov 14",
+          "value": 2070
+        },
+        {
+          "label": "Nov 15",
+          "value": 1953
+        },
+        {
+          "label": "Nov 16",
+          "value": 3080
+        },
+        {
+          "label": "Nov 17",
+          "value": 3443
+        },
+        {
+          "label": "Nov 18",
+          "value": 3498
+        },
+        {
+          "label": "Nov 19",
+          "value": 3560
+        },
+        {
+          "label": "Nov 20",
+          "value": 3474
+        },
+        {
+          "label": "Nov 21",
+          "value": 2751
+        },
+        {
+          "label": "Nov 22",
+          "value": 2352
+        },
+        {
+          "label": "Nov 23",
+          "value": 3415
+        },
+        {
+          "label": "Nov 24",
+          "value": 3800
+        },
+        {
+          "label": "Nov 25",
+          "value": 3965
+        },
+        {
+          "label": "Nov 26",
+          "value": 3620
+        },
+        {
+          "label": "Nov 27",
+          "value": 3500
+        },
+        {
+          "label": "Nov 28",
+          "value": 2996
+        },
+        {
+          "label": "Nov 29",
+          "value": 2872
+        },
+        {
+          "label": "Nov 30",
+          "value": 3959
+        },
+        {
+          "label": "Dec 01",
+          "value": 4295
+        },
+        {
+          "label": "Dec 02",
+          "value": 4097
+        },
+        {
+          "label": "Dec 03",
+          "value": 4460
+        },
+        {
+          "label": "Dec 04",
+          "value": 4126
+        },
+        {
+          "label": "Dec 05",
+          "value": 3079
+        },
+        {
+          "label": "Dec 06",
+          "value": 2948
+        },
+        {
+          "label": "Dec 07",
+          "value": 4705
+        },
+        {
+          "label": "Dec 08",
+          "value": 6681
+        },
+        {
+          "label": "Dec 09",
+          "value": 5525
+        },
+        {
+          "label": "Dec 10",
+          "value": 5226
+        },
+        {
+          "label": "Dec 11",
+          "value": 4941
+        },
+        {
+          "label": "Dec 12",
+          "value": 3744
+        },
+        {
+          "label": "Dec 13",
+          "value": 3400
+        },
+        {
+          "label": "Dec 14",
+          "value": 4549
+        },
+        {
+          "label": "Dec 15",
+          "value": 4982
+        },
+        {
+          "label": "Dec 16",
+          "value": 4814
+        },
+        {
+          "label": "Dec 17",
+          "value": 4705
+        },
+        {
+          "label": "Dec 18",
+          "value": 4254
+        },
+        {
+          "label": "Dec 19",
+          "value": 3231
+        },
+        {
+          "label": "Dec 20",
+          "value": 2964
+        },
+        {
+          "label": "Dec 21",
+          "value": 3615
+        },
+        {
+          "label": "Dec 22",
+          "value": 3400
+        },
+        {
+          "label": "Dec 23",
+          "value": 3115
+        },
+        {
+          "label": "Dec 24",
+          "value": 2595
+        },
+        {
+          "label": "Dec 25",
+          "value": 2489
+        },
+        {
+          "label": "Dec 26",
+          "value": 2468
+        },
+        {
+          "label": "Dec 27",
+          "value": 2492
+        },
+        {
+          "label": "Dec 28",
+          "value": 3037
+        },
+        {
+          "label": "Dec 29",
+          "value": 3116
+        },
+        {
+          "label": "Dec 30",
+          "value": 2946
+        },
+        {
+          "label": "Dec 31",
+          "value": 2428
+        },
+        {
+          "label": "Jan 01",
+          "value": 2155
+        },
+        {
+          "label": "Jan 02",
+          "value": 2575
+        },
+        {
+          "label": "Jan 03",
+          "value": 2574
+        },
+        {
+          "label": "Jan 04",
+          "value": 3062
+        },
+        {
+          "label": "Jan 05",
+          "value": 4074
+        },
+        {
+          "label": "Jan 06",
+          "value": 5472
+        },
+        {
+          "label": "Jan 07",
+          "value": 4157
+        },
+        {
+          "label": "Jan 08",
+          "value": 3787
+        },
+        {
+          "label": "Jan 09",
+          "value": 2949
+        },
+        {
+          "label": "Jan 10",
+          "value": 2765
+        },
+        {
+          "label": "Jan 11",
+          "value": 3597
+        },
+        {
+          "label": "Jan 12",
+          "value": 4176
+        },
+        {
+          "label": "Jan 13",
+          "value": 4090
+        },
+        {
+          "label": "Jan 14",
+          "value": 3895
+        },
+        {
+          "label": "Jan 15",
+          "value": 3536
+        },
+        {
+          "label": "Jan 16",
+          "value": 2882
+        },
+        {
+          "label": "Jan 17",
+          "value": 2707
+        },
+        {
+          "label": "Jan 18",
+          "value": 3214
+        },
+        {
+          "label": "Jan 19",
+          "value": 3706
+        },
+        {
+          "label": "Jan 20",
+          "value": 4189
+        },
+        {
+          "label": "Jan 21",
+          "value": 4188
+        },
+        {
+          "label": "Jan 22",
+          "value": 3593
+        },
+        {
+          "label": "Jan 23",
+          "value": 2813
+        },
+        {
+          "label": "Jan 24",
+          "value": 2686
+        },
+        {
+          "label": "Jan 25",
+          "value": 3493
+        },
+        {
+          "label": "Jan 26",
+          "value": 3576
+        },
+        {
+          "label": "Jan 27",
+          "value": 3983
+        },
+        {
+          "label": "Jan 28",
+          "value": 3709
+        },
+        {
+          "label": "Jan 29",
+          "value": 3369
+        },
+        {
+          "label": "Jan 30",
+          "value": 2582
+        },
+        {
+          "label": "Jan 31",
+          "value": 2517
+        }
+      ],
+      "breakdownTitle": {
+        "en": "Retention by device",
+        "pt": "Retenção por dispositivo"
+      },
+      "breakdown": [
+        {
+          "name": "desktop",
+          "value": 158542,
+          "share": 1.35
+        },
+        {
+          "name": "mobile",
+          "value": 108929,
+          "share": 1.42
+        },
+        {
+          "name": "tablet",
+          "value": 6231,
+          "share": 1.24
+        }
+      ],
+      "detailTitle": {
+        "en": "Return context",
+        "pt": "Contexto de retorno"
+      },
+      "detail": [
+        {
+          "name": "United States",
+          "value": 118222,
+          "purchasers": 1619
+        },
+        {
+          "name": "India",
+          "value": 25291,
+          "purchasers": 339
+        },
+        {
+          "name": "Canada",
+          "value": 20220,
+          "purchasers": 298
+        },
+        {
+          "name": "United Kingdom",
+          "value": 8504,
+          "purchasers": 118
+        },
+        {
+          "name": "France",
+          "value": 5368,
+          "purchasers": 84
+        },
+        {
+          "name": "Spain",
+          "value": 5033,
+          "purchasers": 76
+        },
+        {
+          "name": "Germany",
+          "value": 4853,
+          "purchasers": 63
+        },
+        {
+          "name": "China",
+          "value": 4607,
+          "purchasers": 55
+        },
+        {
+          "name": "Taiwan",
+          "value": 4558,
+          "purchasers": 59
+        },
+        {
+          "name": "Italy",
+          "value": 3738,
+          "purchasers": 43
+        },
+        {
+          "name": "Singapore",
+          "value": 3590,
+          "purchasers": 42
+        },
+        {
+          "name": "Japan",
+          "value": 3542,
+          "purchasers": 59
+        }
+      ],
+      "finding": {
+        "en": "Repeat-day behavior is materially smaller than initial reach, limiting compounding growth.",
+        "pt": "O comportamento de retorno em dias diferentes é muito menor que o alcance inicial, limitando o crescimento composto."
+      },
+      "action": {
+        "en": "Create lifecycle experiments by first product and acquisition channel, then measure second-session lift.",
+        "pt": "Crie experimentos de ciclo de vida por primeiro produto e canal de aquisição e meça o aumento da segunda sessão."
+      }
+    },
+    {
+      "id": "trust",
+      "title": {
+        "en": "Data Trust",
+        "pt": "Confiança dos Dados"
+      },
+      "eyebrow": {
+        "en": "Measurement governance",
+        "pt": "Governança de mensuração"
+      },
+      "question": {
+        "en": "Can decision-makers trust the event model and its limitations?",
+        "pt": "Os decisores podem confiar no modelo de eventos e em suas limitações?"
+      },
+      "metrics": [
+        {
+          "id": "rows",
+          "label": {
+            "en": "Events modeled",
+            "pt": "Eventos modelados"
+          },
+          "value": 2251084,
+          "previous": 2251084,
+          "format": "integer",
+          "improvement": "up"
+        },
+        {
+          "id": "engaged",
+          "label": {
+            "en": "Engaged-user coverage",
+            "pt": "Cobertura de usuários engajados"
+          },
+          "value": 0.7892906969840893,
+          "previous": 0.7892906969840893,
+          "format": "percent",
+          "improvement": "up"
+        },
+        {
+          "id": "days",
+          "label": {
+            "en": "Coverage days",
+            "pt": "Dias cobertos"
+          },
+          "value": 92,
+          "previous": 92,
+          "format": "integer",
+          "improvement": "up"
+        }
+      ],
+      "trendTitle": {
+        "en": "Daily source volume",
+        "pt": "Volume diário da fonte"
+      },
+      "trend": [
+        {
+          "label": "Nov 01",
+          "value": 2360
+        },
+        {
+          "label": "Nov 02",
+          "value": 3254
+        },
+        {
+          "label": "Nov 03",
+          "value": 4641
+        },
+        {
+          "label": "Nov 04",
+          "value": 3731
+        },
+        {
+          "label": "Nov 05",
+          "value": 3268
+        },
+        {
+          "label": "Nov 06",
+          "value": 2812
+        },
+        {
+          "label": "Nov 07",
+          "value": 2000
+        },
+        {
+          "label": "Nov 08",
+          "value": 1915
+        },
+        {
+          "label": "Nov 09",
+          "value": 2802
+        },
+        {
+          "label": "Nov 10",
+          "value": 3256
+        },
+        {
+          "label": "Nov 11",
+          "value": 3287
+        },
+        {
+          "label": "Nov 12",
+          "value": 3175
+        },
+        {
+          "label": "Nov 13",
+          "value": 2857
+        },
+        {
+          "label": "Nov 14",
+          "value": 2070
+        },
+        {
+          "label": "Nov 15",
+          "value": 1953
+        },
+        {
+          "label": "Nov 16",
+          "value": 3080
+        },
+        {
+          "label": "Nov 17",
+          "value": 3443
+        },
+        {
+          "label": "Nov 18",
+          "value": 3498
+        },
+        {
+          "label": "Nov 19",
+          "value": 3560
+        },
+        {
+          "label": "Nov 20",
+          "value": 3474
+        },
+        {
+          "label": "Nov 21",
+          "value": 2751
+        },
+        {
+          "label": "Nov 22",
+          "value": 2352
+        },
+        {
+          "label": "Nov 23",
+          "value": 3415
+        },
+        {
+          "label": "Nov 24",
+          "value": 3800
+        },
+        {
+          "label": "Nov 25",
+          "value": 3965
+        },
+        {
+          "label": "Nov 26",
+          "value": 3620
+        },
+        {
+          "label": "Nov 27",
+          "value": 3500
+        },
+        {
+          "label": "Nov 28",
+          "value": 2996
+        },
+        {
+          "label": "Nov 29",
+          "value": 2872
+        },
+        {
+          "label": "Nov 30",
+          "value": 3959
+        },
+        {
+          "label": "Dec 01",
+          "value": 4295
+        },
+        {
+          "label": "Dec 02",
+          "value": 4097
+        },
+        {
+          "label": "Dec 03",
+          "value": 4460
+        },
+        {
+          "label": "Dec 04",
+          "value": 4126
+        },
+        {
+          "label": "Dec 05",
+          "value": 3079
+        },
+        {
+          "label": "Dec 06",
+          "value": 2948
+        },
+        {
+          "label": "Dec 07",
+          "value": 4705
+        },
+        {
+          "label": "Dec 08",
+          "value": 6681
+        },
+        {
+          "label": "Dec 09",
+          "value": 5525
+        },
+        {
+          "label": "Dec 10",
+          "value": 5226
+        },
+        {
+          "label": "Dec 11",
+          "value": 4941
+        },
+        {
+          "label": "Dec 12",
+          "value": 3744
+        },
+        {
+          "label": "Dec 13",
+          "value": 3400
+        },
+        {
+          "label": "Dec 14",
+          "value": 4549
+        },
+        {
+          "label": "Dec 15",
+          "value": 4982
+        },
+        {
+          "label": "Dec 16",
+          "value": 4814
+        },
+        {
+          "label": "Dec 17",
+          "value": 4705
+        },
+        {
+          "label": "Dec 18",
+          "value": 4254
+        },
+        {
+          "label": "Dec 19",
+          "value": 3231
+        },
+        {
+          "label": "Dec 20",
+          "value": 2964
+        },
+        {
+          "label": "Dec 21",
+          "value": 3615
+        },
+        {
+          "label": "Dec 22",
+          "value": 3400
+        },
+        {
+          "label": "Dec 23",
+          "value": 3115
+        },
+        {
+          "label": "Dec 24",
+          "value": 2595
+        },
+        {
+          "label": "Dec 25",
+          "value": 2489
+        },
+        {
+          "label": "Dec 26",
+          "value": 2468
+        },
+        {
+          "label": "Dec 27",
+          "value": 2492
+        },
+        {
+          "label": "Dec 28",
+          "value": 3037
+        },
+        {
+          "label": "Dec 29",
+          "value": 3116
+        },
+        {
+          "label": "Dec 30",
+          "value": 2946
+        },
+        {
+          "label": "Dec 31",
+          "value": 2428
+        },
+        {
+          "label": "Jan 01",
+          "value": 2155
+        },
+        {
+          "label": "Jan 02",
+          "value": 2575
+        },
+        {
+          "label": "Jan 03",
+          "value": 2574
+        },
+        {
+          "label": "Jan 04",
+          "value": 3062
+        },
+        {
+          "label": "Jan 05",
+          "value": 4074
+        },
+        {
+          "label": "Jan 06",
+          "value": 5472
+        },
+        {
+          "label": "Jan 07",
+          "value": 4157
+        },
+        {
+          "label": "Jan 08",
+          "value": 3787
+        },
+        {
+          "label": "Jan 09",
+          "value": 2949
+        },
+        {
+          "label": "Jan 10",
+          "value": 2765
+        },
+        {
+          "label": "Jan 11",
+          "value": 3597
+        },
+        {
+          "label": "Jan 12",
+          "value": 4176
+        },
+        {
+          "label": "Jan 13",
+          "value": 4090
+        },
+        {
+          "label": "Jan 14",
+          "value": 3895
+        },
+        {
+          "label": "Jan 15",
+          "value": 3536
+        },
+        {
+          "label": "Jan 16",
+          "value": 2882
+        },
+        {
+          "label": "Jan 17",
+          "value": 2707
+        },
+        {
+          "label": "Jan 18",
+          "value": 3214
+        },
+        {
+          "label": "Jan 19",
+          "value": 3706
+        },
+        {
+          "label": "Jan 20",
+          "value": 4189
+        },
+        {
+          "label": "Jan 21",
+          "value": 4188
+        },
+        {
+          "label": "Jan 22",
+          "value": 3593
+        },
+        {
+          "label": "Jan 23",
+          "value": 2813
+        },
+        {
+          "label": "Jan 24",
+          "value": 2686
+        },
+        {
+          "label": "Jan 25",
+          "value": 3493
+        },
+        {
+          "label": "Jan 26",
+          "value": 3576
+        },
+        {
+          "label": "Jan 27",
+          "value": 3983
+        },
+        {
+          "label": "Jan 28",
+          "value": 3709
+        },
+        {
+          "label": "Jan 29",
+          "value": 3369
+        },
+        {
+          "label": "Jan 30",
+          "value": 2582
+        },
+        {
+          "label": "Jan 31",
+          "value": 2517
+        }
+      ],
+      "breakdownTitle": {
+        "en": "Event coverage",
+        "pt": "Cobertura de eventos"
+      },
+      "breakdown": [
+        {
+          "name": "user_engagement",
+          "value": 1058721
+        },
+        {
+          "name": "view_item",
+          "value": 386068
+        },
+        {
+          "name": "session_start",
+          "value": 354970
+        },
+        {
+          "name": "first_visit",
+          "value": 257462
+        },
+        {
+          "name": "add_to_cart",
+          "value": 58543
+        },
+        {
+          "name": "begin_checkout",
+          "value": 38757
+        },
+        {
+          "name": "select_item",
+          "value": 31007
+        },
+        {
+          "name": "view_search_results",
+          "value": 26172
+        },
+        {
+          "name": "add_shipping_info",
+          "value": 19722
+        },
+        {
+          "name": "add_payment_info",
+          "value": 13899
+        },
+        {
+          "name": "purchase",
+          "value": 5692
+        },
+        {
+          "name": "view_item_list",
+          "value": 71
+        }
+      ],
+      "detailTitle": {
+        "en": "Metric lineage checks",
+        "pt": "Verificações de linhagem"
+      },
+      "detail": [
+        {
+          "stage": "session_start",
+          "users": 267116,
+          "reach_pct": 99.1
+        },
+        {
+          "stage": "view_item",
+          "users": 61252,
+          "reach_pct": 22.7
+        },
+        {
+          "stage": "add_to_cart",
+          "users": 12545,
+          "reach_pct": 4.7
+        },
+        {
+          "stage": "begin_checkout",
+          "users": 9715,
+          "reach_pct": 3.6
+        },
+        {
+          "stage": "purchase",
+          "users": 4419,
+          "reach_pct": 1.6
+        }
+      ],
+      "finding": {
+        "en": "The source is an obfuscated public sample; placeholder values and internal inconsistencies remain.",
+        "pt": "A fonte é uma amostra pública ofuscada; valores substitutos e inconsistências internas permanecem."
+      },
+      "action": {
+        "en": "Use this model as an analytics pattern, then reconcile revenue and identities against a production backend.",
+        "pt": "Use este modelo como padrão analítico e depois reconcilie receita e identidades com o backend de produção."
+      }
+    }
+  ]
+}

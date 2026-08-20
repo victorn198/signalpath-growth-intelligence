@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: mart_growth_daily
+    description: Daily GA4 growth metrics at one row per event date.
+    columns:
+      - name: event_date
+        tests: [not_null, unique]
+      - name: active_users
+        tests: [not_null]
+      - name: sessions
+        tests: [not_null]

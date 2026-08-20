@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.venv/
+.pip-cache/
+.env
+data/raw/
+data/*.duckdb
+test-results/
+playwright-report/
+__pycache__/
+.pytest_cache/
+.dbt/
+logs/
+target/
+*.tsbuildinfo
