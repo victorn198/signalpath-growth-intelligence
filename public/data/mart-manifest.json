@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "marts": {
+    "growth_sessions": {
+      "file": "mart_growth_sessions.parquet",
+      "pages": [
+        "executive",
+        "funnel",
+        "acquisition",
+        "products",
+        "retention",
+        "trust"
+      ],
+      "grain": "session-day-channel-device-country",
+      "columns": [
+        "event_date",
+        "user_id",
+        "session_id",
+        "channel",
+        "device",
+        "country",
+        "events",
+        "purchased",
+        "purchases",
+        "revenue"
+      ],
+      "rows": 359708,
+      "bytes": 6212644,
+      "load": "initial-query"
+    },
+    "growth_products": {
+      "file": "mart_growth_products.parquet",
+      "pages": [
+        "products"
+      ],
+      "grain": "day-product-channel-device-country",
+      "columns": [
+        "event_date",
+        "product_type",
+        "item_name",
+        "channel",
+        "device",
+        "country",
+        "revenue",
+        "units",
+        "orders"
+      ],
+      "rows": 12227,
+      "bytes": 60305,
+      "load": "on-demand"
+    }
+  }
+}

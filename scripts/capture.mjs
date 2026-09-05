@@ -2,7 +2,7 @@ import { spawn } from 'node:child_process'
 import { mkdir } from 'node:fs/promises'
 import { chromium } from '@playwright/test'
 
-const port = Number(process.env.CAPTURE_PORT || 4180)
+const port = Number(process.env.CAPTURE_PORT || 4181)
 const server = spawn(`npm run dev -- --port ${port}`, { stdio: 'ignore', shell: true })
 const base = `http://127.0.0.1:${port}`
 const slug = value => value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
@@ -15,11 +15,12 @@ try {
   const browser = await chromium.launch({ channel: 'msedge' })
   const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1 })
   await page.goto(base, { waitUntil: 'networkidle' })
+  await page.locator('.decision-strip:not(.is-loading)').waitFor({ timeout: 90000 })
   const buttons = page.locator('.topbar nav button')
   const count = await buttons.count()
   for (let index = 0; index < count; index++) {
     const button = buttons.nth(index); const name = slug(await button.innerText())
-    await button.click(); await page.waitForTimeout(350)
+    await button.click(); await page.locator('.decision-strip:not(.is-loading)').waitFor({ timeout: 90000 })
     await page.screenshot({ path: `docs/images/en/${name}.png`, fullPage: true })
   }
   await page.getByRole('button', { name: 'PT' }).click(); await page.waitForTimeout(250)

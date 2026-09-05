@@ -9,7 +9,7 @@ export type Metric = {
   improvement: 'up' | 'down'
 }
 export type SeriesPoint = { label: string; value: number; secondary?: number }
-export type BreakdownRow = { name: string; value: number; share?: number; note?: string }
+export type BreakdownRow = { name: string; value: number; previous?: number; share?: number; note?: string }
 export type PageData = {
   id: string
   title: Localized

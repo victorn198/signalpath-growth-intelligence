@@ -9,4 +9,4 @@
 | Tracked revenue | Purchased item | Sum of `item_revenue` from purchased item rows |
 | Multi-day users | User | Users active on more than one calendar date divided by users |
 
-All comparisons use non-overlapping halves of the historical sample unless the page states otherwise.
+Finite periods use the immediately preceding window of equal length. Full history has no comparison unless a complete prior window exists.

@@ -48,7 +48,6 @@ def build(events: Path, products: Path) -> None:
     purchasers = scalar("SELECT count(DISTINCT user_id) FROM events WHERE is_purchase")
     purchases = scalar("SELECT count(DISTINCT transaction_id) FROM events WHERE is_purchase")
     revenue = scalar("SELECT sum(item_revenue) FROM products WHERE is_purchase")
-    engaged = scalar("SELECT count(DISTINCT user_id) FROM events WHERE is_engaged_event")
     start, end = con.execute("SELECT min(event_date)::DATE, max(event_date)::DATE FROM events").fetchone()
     midpoint = con.execute("SELECT min(event_date) + (max(event_date)-min(event_date))/2 FROM events").fetchone()[0]
     previous_users = scalar(f"SELECT count(DISTINCT user_id) FROM events WHERE event_date < TIMESTAMP '{midpoint}'")
@@ -89,11 +88,11 @@ def build(events: Path, products: Path) -> None:
     ]
     pages = [
         ("executive", "Executive Growth", "Crescimento Executivo", "Growth pulse", "Pulso de crescimento", "Where is growth healthy, and where is the funnel leaking?", "Onde o crescimento está saudável e onde o funil perde usuários?", base_metrics, "Daily active users", "Usuários ativos por dia", trend, "Acquisition mix", "Mix de aquisição", channels, countries, "Country opportunity detail", "Detalhe de oportunidade por país", "Conversion is concentrated in a narrow share of active users; channel quality matters more than raw traffic.", "A conversão está concentrada em uma pequena parcela dos usuários ativos; qualidade do canal importa mais que tráfego bruto.", "Shift budget tests toward channels with repeatable purchase intent and validate tracking before scaling.", "Direcione testes de orçamento para canais com intenção de compra recorrente e valide o rastreamento antes de escalar."),
-        ("funnel", "Funnel & Journey", "Funil e Jornada", "Behavior path", "Caminho comportamental", "At which behavior step does purchase intent collapse?", "Em qual etapa comportamental a intenção de compra desaba?", base_metrics[:4], "Journey volume", "Volume da jornada", trend, "Event progression", "Progressão de eventos", events_breakdown, journey, "Funnel stage detail", "Detalhe das etapas do funil", "The largest decision gap appears before checkout rather than at payment completion.", "A maior lacuna de decisão aparece antes do checkout, e não na conclusão do pagamento.", "Instrument product-view to cart transitions and test clearer product-level calls to action.", "Instrumente a transição de visualização para carrinho e teste chamadas para ação mais claras nos produtos."),
+        ("funnel", "Funnel & Journey", "Funil e Jornada", "Behavior path", "Caminho comportamental", "At which behavior step does purchase intent collapse?", "Em qual etapa comportamental a intenção de compra desaba?", base_metrics[:4], "Purchasers over time", "Compradores ao longo do tempo", trend, "Event progression", "Progressão de eventos", events_breakdown, journey, "Funnel stage detail", "Detalhe das etapas do funil", "The largest decision gap appears before checkout rather than at payment completion.", "A maior lacuna de decisão aparece antes do checkout, e não na conclusão do pagamento.", "Instrument product-view to cart transitions and test clearer product-level calls to action.", "Instrumente a transição de visualização para carrinho e teste chamadas para ação mais claras nos produtos."),
         ("acquisition", "Acquisition Quality", "Qualidade de Aquisição", "Channel economics", "Economia dos canais", "Which channels bring qualified behavior instead of superficial visits?", "Quais canais trazem comportamento qualificado em vez de visitas superficiais?", base_metrics[:4], "Qualified users over time", "Usuários qualificados ao longo do tempo", trend, "Users by channel", "Usuários por canal", channels, channels, "Channel quality detail", "Detalhe de qualidade dos canais", "Traffic volume and conversion propensity do not move together across channels.", "Volume de tráfego e propensão à conversão não caminham juntos entre os canais.", "Evaluate acquisition on purchase progression and engagement, not sessions alone.", "Avalie aquisição pela progressão até a compra e engajamento, não apenas por sessões."),
         ("products", "Product Performance", "Desempenho de Produtos", "Merchandising signal", "Sinal de merchandising", "Which product groups translate attention into tracked revenue?", "Quais grupos de produtos transformam atenção em receita rastreada?", base_metrics[2:], "Demand signal", "Sinal de demanda", trend, "Revenue by product group", "Receita por grupo de produtos", products_breakdown, product_detail, "Product opportunity detail", "Detalhe de oportunidade de produto", "A small set of product groups captures most tracked purchase value.", "Um pequeno conjunto de grupos de produtos concentra a maior parte do valor de compra rastreado.", "Prioritize discovery and landing-page tests for high-intent groups while monitoring concentration risk.", "Priorize testes de descoberta e landing pages para grupos de alta intenção, monitorando o risco de concentração."),
-        ("retention", "Cohorts & Retention", "Coortes e Retenção", "Return behavior", "Comportamento de retorno", "Do acquired users return, or does growth depend on replacement traffic?", "Usuários adquiridos retornam ou o crescimento depende de tráfego de reposição?", [metric("return", "Multi-day users", "Usuários em vários dias", repeat, repeat*.9, "percent"), *base_metrics[:3]], "Returning activity", "Atividade de retorno", trend, "Retention by device", "Retenção por dispositivo", devices, countries, "Return context", "Contexto de retorno", "Repeat-day behavior is materially smaller than initial reach, limiting compounding growth.", "O comportamento de retorno em dias diferentes é muito menor que o alcance inicial, limitando o crescimento composto.", "Create lifecycle experiments by first product and acquisition channel, then measure second-session lift.", "Crie experimentos de ciclo de vida por primeiro produto e canal de aquisição e meça o aumento da segunda sessão."),
-        ("trust", "Data Trust", "Confiança dos Dados", "Measurement governance", "Governança de mensuração", "Can decision-makers trust the event model and its limitations?", "Os decisores podem confiar no modelo de eventos e em suas limitações?", [metric("rows", "Events modeled", "Eventos modelados", total_events, total_events), metric("engaged", "Engaged-user coverage", "Cobertura de usuários engajados", engaged/users if users else 0, engaged/users if users else 0, "percent"), metric("days", "Coverage days", "Dias cobertos", (end-start).days+1, (end-start).days+1)], "Daily source volume", "Volume diário da fonte", trend, "Event coverage", "Cobertura de eventos", events_breakdown, journey, "Metric lineage checks", "Verificações de linhagem", "The source is an obfuscated public sample; placeholder values and internal inconsistencies remain.", "A fonte é uma amostra pública ofuscada; valores substitutos e inconsistências internas permanecem.", "Use this model as an analytics pattern, then reconcile revenue and identities against a production backend.", "Use este modelo como padrão analítico e depois reconcilie receita e identidades com o backend de produção."),
+        ("retention", "Repeat Behavior", "Comportamento Recorrente", "Return behavior", "Comportamento de retorno", "Do acquired users return on another day, or does growth depend on replacement traffic?", "Usuários adquiridos retornam em outro dia ou o crescimento depende de tráfego de reposição?", [metric("return", "Multi-day users", "Usuários em vários dias", repeat, repeat*.9, "percent"), *base_metrics[:3]], "Returning activity", "Atividade de retorno", trend, "Repeat behavior by device", "Comportamento recorrente por dispositivo", devices, countries, "Return context", "Contexto de retorno", "Repeat-day behavior is materially smaller than initial reach, limiting compounding growth.", "O comportamento de retorno em dias diferentes é muito menor que o alcance inicial, limitando o crescimento composto.", "Create lifecycle experiments by first product and acquisition channel, then measure second-session lift.", "Crie experimentos de ciclo de vida por primeiro produto e canal de aquisição e meça o aumento da segunda sessão."),
+        ("trust", "Data Trust", "Confiança dos Dados", "Measurement governance", "Governança de mensuração", "Can decision-makers trust the event model and its limitations?", "Os decisores podem confiar no modelo de eventos e em suas limitações?", [metric("rows", "Events modeled", "Eventos modelados", total_events, total_events), metric("sessions", "Distinct sessions", "Sessões distintas", sessions, sessions), metric("days", "Coverage days", "Dias cobertos", (end-start).days+1, (end-start).days+1)], "Daily source volume", "Volume diário da fonte", trend, "Event coverage", "Cobertura de eventos", events_breakdown, journey, "Metric lineage checks", "Verificações de linhagem", "The source is an obfuscated public sample; placeholder values and internal inconsistencies remain.", "A fonte é uma amostra pública ofuscada; valores substitutos e inconsistências internas permanecem.", "Use this model as an analytics pattern, then reconcile revenue and identities against a production backend.", "Use este modelo como padrão analítico e depois reconcilie receita e identidades com o backend de produção."),
     ]
     payload_pages = []
     for p in pages:
@@ -111,6 +110,43 @@ def build(events: Path, products: Path) -> None:
         SELECT user_id, session_id, sum(item_revenue) FILTER(WHERE is_purchase) AS revenue FROM products GROUP BY 1,2
       ) SELECT s.*, coalesce(r.revenue,0) AS revenue FROM session_events s LEFT JOIN session_revenue r USING(user_id,session_id)
     ) TO '{(out / 'mart_growth_sessions.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
+    con.execute(f"""COPY (
+        SELECT event_date::DATE AS event_date,
+               coalesce(product_type,'Unknown') AS product_type,
+               coalesce(item_name,'Unknown') AS item_name,
+               coalesce(marketing_channel,'Unknown') AS channel,
+               coalesce(device,'Unknown') AS device,
+               coalesce(country,'Unknown') AS country,
+               round(sum(item_revenue),2) AS revenue,
+               sum(quantity)::DOUBLE AS units,
+               count(DISTINCT transaction_id)::DOUBLE AS orders
+        FROM products WHERE is_purchase
+        GROUP BY 1,2,3,4,5,6
+    ) TO '{(out / 'mart_growth_products.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
+    manifest = {
+        "version": 1,
+        "marts": {
+            "growth_sessions": {
+                "file": "mart_growth_sessions.parquet",
+                "pages": ["executive", "funnel", "acquisition", "products", "retention", "trust"],
+                "grain": "session-day-channel-device-country",
+                "columns": ["event_date", "user_id", "session_id", "channel", "device", "country", "events", "purchased", "purchases", "revenue"],
+                "rows": int(con.execute(f"SELECT count(*) FROM read_parquet('{(out / 'mart_growth_sessions.parquet').as_posix()}')").fetchone()[0]),
+                "bytes": (out / "mart_growth_sessions.parquet").stat().st_size,
+                "load": "initial-query",
+            },
+            "growth_products": {
+                "file": "mart_growth_products.parquet",
+                "pages": ["products"],
+                "grain": "day-product-channel-device-country",
+                "columns": ["event_date", "product_type", "item_name", "channel", "device", "country", "revenue", "units", "orders"],
+                "rows": int(con.execute(f"SELECT count(*) FROM read_parquet('{(out / 'mart_growth_products.parquet').as_posix()}')").fetchone()[0]),
+                "bytes": (out / "mart_growth_products.parquet").stat().st_size,
+                "load": "on-demand",
+            },
+        },
+    }
+    (out / "mart-manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     print(f"Built {out / 'dashboard.json'} from {total_events:,} events")
 
 
@@ -120,6 +156,24 @@ def validate() -> None:
     assert data["meta"]["rows"] > 0
     assert len(data["pages"]) == 6
     assert all(page["metrics"] and page["trend"] for page in data["pages"])
+    manifest = json.loads((ROOT / "public/data/mart-manifest.json").read_text(encoding="utf-8"))
+    budgets = {"growth_sessions": 8_000_000, "growth_products": 500_000}
+    required = {
+        "growth_sessions": {"event_date", "user_id", "session_id", "channel", "device", "country", "events", "purchased", "purchases", "revenue"},
+        "growth_products": {"event_date", "product_type", "item_name", "channel", "device", "country", "revenue", "units", "orders"},
+    }
+    con = duckdb.connect()
+    for name, spec in manifest["marts"].items():
+        path = ROOT / "public/data" / spec["file"]
+        assert path.exists() and path.stat().st_size <= budgets[name]
+        columns = {row[0] for row in con.execute("DESCRIBE SELECT * FROM read_parquet(?)", [str(path)]).fetchall()}
+        assert required[name] <= columns
+    product_path = ROOT / "public/data/mart_growth_products.parquet"
+    current, previous = con.execute("""WITH bounds AS (SELECT max(event_date) hi FROM read_parquet(?))
+        SELECT sum(revenue) FILTER(WHERE event_date BETWEEN hi-29 AND hi),
+               sum(revenue) FILTER(WHERE event_date BETWEEN hi-59 AND hi-30)
+        FROM read_parquet(?),bounds""", [str(product_path), str(product_path)]).fetchone()
+    assert current and previous
     print("SignalPath validation passed")
 
 

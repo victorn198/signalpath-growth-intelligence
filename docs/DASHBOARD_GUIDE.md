@@ -10,12 +10,12 @@ React and ECharts provide a custom product interface; DuckDB builds reproducible
 
 1. Start at **Executive Growth** to identify the largest deviation.
 2. Keep the same filter context while moving to the diagnostic page.
-3. Use **Funnel & Journey** for progression problems, **Acquisition Quality** for channel problems, **Product Performance** for demand problems, and **Cohorts & Retention** for return behavior.
+3. Use **Funnel & Journey** for progression problems, **Acquisition Quality** for channel problems, **Product Performance** for demand problems, and **Repeat Behavior** for multi-day return behavior.
 4. Read the dark evidence statement before the recommended action.
 5. Use **Data Trust** before presenting a conclusion.
 6. Use **Restore default view** to return to the documented baseline.
 
-Global filters are **Channel**, **Device**, and **Country**. A selection recalculates the compatible KPIs and trend with SQL against the compact Parquet mart. Comparisons use non-overlapping halves of the selected historical window.
+Global filters are **Period**, **Channel**, **Device**, and **Country**. A selection recalculates compatible KPIs and trends with SQL against compact Parquet marts. Each finite period is compared with the immediately preceding window of equal length; full history is shown without an invented comparison when no complete prior window exists.
 
 ## Indicator dictionary
 
@@ -28,7 +28,7 @@ Global filters are **Channel**, **Device**, and **Country**. A selection recalcu
 | Tracked revenue | Quantifies observed purchase value | Sum of revenue on purchased rows | GA4 sample revenue, not current company revenue |
 | Multi-day users | Provides a defensible retention proxy | Users active on more than one date / active users | Return behavior inside the sample, not contractual retention |
 | Events modeled | Makes processing scope visible | Count of source events | Pipeline coverage, not business performance |
-| Engaged-user coverage | Checks whether engagement signals are populated | Users with engagement evidence / active users | Instrumentation coverage |
+| Distinct sessions | Exposes visit opportunities without duplicating session rows | Distinct user_id + session_id | Session volume in the selected scope |
 | Coverage days | Exposes the historical window | Distinct source dates | Analysis horizon, not freshness |
 
 Each KPI card contains the current value, direction, percentage change, and prior-window comparison. Green/red indicates whether the movement is favorable for that metric, not whether the number is intrinsically good.
@@ -50,9 +50,9 @@ Each KPI card contains the current value, direction, percentage change, and prio
 **Purpose:** locate where observed journeys lose momentum.
 
 - **KPI row:** users, sessions, conversion, and purchases establish the denominator and outcome.
-- **Journey volume:** checks whether progression changes coincide with overall traffic shifts.
-- **Event progression:** compares key event stages and makes step loss visible.
-- **Funnel stage detail:** exposes stage-level counts used by the chart.
+- **Purchasers over time:** recalculates distinct purchasers for the selected window and filters.
+- **Full-source stages:** compares the static source-wide event stages and makes adjacent loss visible.
+- **Funnel stage detail:** exposes the full-source counts. The public session mart does not preserve intermediate stage flags, so these rows deliberately do not react to filters.
 - **Decision use:** investigate tracking or experience changes at the first materially weak step; do not treat event order as causal proof.
 
 ### 3. Acquisition Quality
@@ -75,22 +75,22 @@ Each KPI card contains the current value, direction, percentage change, and prio
 - **Product opportunity detail:** provides the values behind the ranking for review and export.
 - **Decision use:** formulate merchandising or experimentation hypotheses. The sample has no margin, inventory, or causal exposure.
 
-### 5. Cohorts & Retention
+### 5. Repeat Behavior
 
 **Purpose:** evaluate return behavior without pretending the sample contains subscription churn.
 
 - **Multi-day users:** primary repeat-activity proxy.
 - **Active users, sessions, and conversion:** keep return behavior tied to scale and outcomes.
 - **Returning activity:** shows when repeat behavior occurs.
-- **Retention by device:** tests whether return behavior differs by device context.
-- **Return context:** exposes the cohort evidence supporting the summary.
+- **Repeat behavior by device:** tests whether multi-day activity differs by device context.
+- **Return context:** exposes users, returning users, and the repeat-day percentage; it is not a cohort table.
 - **Decision use:** investigate device or journey friction; the three-month sample cannot support lifetime-value claims.
 
 ### 6. Data Trust
 
 **Purpose:** prevent a polished interface from hiding weak data.
 
-- **Events modeled, engaged-user coverage, and coverage days:** describe volume, instrumentation completeness, and time coverage.
+- **Events modeled, distinct sessions, and coverage days:** describe event volume, session grain, and time coverage.
 - **Daily source volume:** makes ingestion gaps or abnormal source days visible.
 - **Event coverage:** shows which event families dominate the source.
 - **Metric lineage checks:** documents the evidence behind the calculations.
@@ -106,5 +106,4 @@ Each KPI card contains the current value, direction, percentage change, and prio
 - A public demo does not replace production identity, privacy, observability, or access controls.
 # Signature interaction: Growth Driver Tree
 
-Read the tree from left to right. A large user-to-session base with a sharp purchase drop points to journey or merchandising friction; a healthy purchase count with weak revenue points to order-value mix. Every node, chart, table, finding, and action uses the same filtered scope.
-
+Read the tree from left to right. A large user-to-session base with a sharp purchase drop points to journey or merchandising friction; a healthy purchase count with weak revenue points to order-value mix. Filtered metrics, charts, findings, and actions use the same scope. The funnel stage benchmark is explicitly source-wide because the public mart does not preserve intermediate flags.

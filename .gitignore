@@ -1,4 +1,9 @@
 node_modules/
+.devserver-*.log
+.devserver-*.err
+.home/
+.npm-cache/
+.wrangler/
 dist/
 .venv/
 .pip-cache/

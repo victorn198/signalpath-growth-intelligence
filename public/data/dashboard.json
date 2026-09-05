@@ -2,7 +2,7 @@
   "meta": {
     "source": "Google GA4 public ecommerce sample",
     "period": "2020-11-01 — 2021-01-31",
-    "builtAt": "2026-08-19",
+    "builtAt": "2026-08-20",
     "rows": 2251084,
     "limitations": {
       "en": "Obfuscated three-month Google Merchandise Store sample. It represents behavioral analytics patterns, not current business performance.",
@@ -664,8 +664,8 @@
         }
       ],
       "trendTitle": {
-        "en": "Journey volume",
-        "pt": "Volume da jornada"
+        "en": "Purchasers over time",
+        "pt": "Compradores ao longo do tempo"
       },
       "trend": [
         {
@@ -2303,8 +2303,8 @@
     {
       "id": "retention",
       "title": {
-        "en": "Cohorts & Retention",
-        "pt": "Coortes e Retenção"
+        "en": "Repeat Behavior",
+        "pt": "Comportamento Recorrente"
       },
       "eyebrow": {
         "en": "Return behavior",
@@ -2735,8 +2735,8 @@
         }
       ],
       "breakdownTitle": {
-        "en": "Retention by device",
-        "pt": "Retenção por dispositivo"
+        "en": "Repeat behavior by device",
+        "pt": "Comportamento recorrente por dispositivo"
       },
       "breakdown": [
         {
@@ -2857,14 +2857,14 @@
           "improvement": "up"
         },
         {
-          "id": "engaged",
+          "id": "sessions",
           "label": {
-            "en": "Engaged-user coverage",
-            "pt": "Cobertura de usuários engajados"
+            "en": "Distinct sessions",
+            "pt": "Sessões distintas"
           },
-          "value": 0.7892906969840893,
-          "previous": 0.7892906969840893,
-          "format": "percent",
+          "value": 358938,
+          "previous": 358938,
+          "format": "integer",
           "improvement": "up"
         },
         {

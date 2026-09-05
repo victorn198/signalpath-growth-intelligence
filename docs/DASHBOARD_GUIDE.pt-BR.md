@@ -10,12 +10,12 @@ React e ECharts oferecem uma interface própria; DuckDB cria marts reproduzívei
 
 1. Comece em **Crescimento Executivo** para identificar o maior desvio.
 2. Mantenha o mesmo contexto de filtros ao navegar para o diagnóstico.
-3. Use **Funil e Jornada** para progressão, **Qualidade de Aquisição** para canais, **Desempenho de Produtos** para demanda e **Coortes e Retenção** para retorno.
+3. Use **Funil e Jornada** para progressão, **Qualidade de Aquisição** para canais, **Desempenho de Produtos** para demanda e **Comportamento Recorrente** para atividade em vários dias.
 4. Leia a conclusão sustentada antes da ação recomendada.
 5. Consulte **Confiança dos Dados** antes de apresentar a conclusão.
 6. Use **Restaurar visão padrão** para voltar ao baseline documentado.
 
-Os filtros globais são **Canal**, **Dispositivo** e **País**. A seleção recalcula KPIs e tendência compatíveis por SQL no mart Parquet. As comparações usam metades não sobrepostas da janela histórica selecionada.
+Os filtros globais são **Período**, **Canal**, **Dispositivo** e **País**. A seleção recalcula KPIs e tendências compatíveis por SQL nos marts Parquet compactos. Cada período finito é comparado com a janela imediatamente anterior de mesma duração; o histórico completo não inventa comparação quando não existe uma janela anterior completa.
 
 ## Dicionário de indicadores
 
@@ -28,7 +28,7 @@ Os filtros globais são **Canal**, **Dispositivo** e **País**. A seleção reca
 | Receita rastreada | Quantifica o valor observado | Soma da receita nas linhas compradas | Receita da amostra GA4, não receita atual de uma empresa |
 | Usuários em vários dias | Proxy defensável de retenção | Usuários ativos em mais de uma data / usuários ativos | Comportamento de retorno, não retenção contratual |
 | Eventos modelados | Expõe o escopo processado | Contagem de eventos da fonte | Cobertura do pipeline, não desempenho |
-| Cobertura de engajamento | Verifica preenchimento do sinal | Usuários com evidência de engajamento / usuários ativos | Cobertura de instrumentação |
+| Sessões distintas | Expõe oportunidades de visita sem duplicar linhas | Combinação distinta de user_id e session_id | Volume de sessões no recorte |
 | Dias cobertos | Expõe a janela histórica | Datas distintas | Horizonte da análise, não atualização em tempo real |
 
 Cada card mostra valor atual, direção, variação percentual e comparação com a janela anterior. Verde e vermelho indicam se o movimento favorece aquela métrica.
@@ -47,9 +47,9 @@ Cada card mostra valor atual, direção, variação percentual e comparação co
 ### 2. Funil e Jornada
 
 - **Objetivo:** localizar onde a jornada perde força.
-- **Volume da jornada:** verifica se a perda acompanha mudança de tráfego.
-- **Progressão de eventos:** torna visível a queda entre etapas.
-- **Detalhe do funil:** expõe as contagens usadas no gráfico.
+- **Compradores ao longo do tempo:** recalcula compradores distintos para a janela e os filtros.
+- **Etapas da fonte completa:** tornam visível a perda entre etapas adjacentes no benchmark integral.
+- **Detalhe do funil:** expõe as contagens da fonte completa. O mart público de sessões não preserva as flags intermediárias, então essas linhas deliberadamente não reagem aos filtros.
 - **Ação:** investigar instrumentação ou experiência na primeira queda material; ordem de eventos não prova causalidade.
 
 ### 3. Qualidade de Aquisição
@@ -68,19 +68,19 @@ Cada card mostra valor atual, direção, variação percentual e comparação co
 - **Detalhe de oportunidade:** fornece os valores usados no ranking.
 - **Ação:** formular hipóteses de merchandising ou experimento; margem e estoque não existem na amostra.
 
-### 5. Coortes e Retenção
+### 5. Comportamento Recorrente
 
 - **Objetivo:** avaliar retorno sem fingir que existe churn de assinatura.
 - **Usuários em vários dias:** proxy principal de repetição.
 - **Atividade recorrente:** mostra quando o retorno acontece.
-- **Retenção por dispositivo:** testa diferenças de contexto.
-- **Contexto de retorno:** expõe as evidências das coortes.
+- **Comportamento recorrente por dispositivo:** testa diferenças na atividade em vários dias.
+- **Contexto de retorno:** expõe usuários, recorrentes e percentual de retorno; não é uma tabela de coortes.
 - **Ação:** investigar fricção de jornada ou dispositivo; três meses não sustentam afirmações de LTV.
 
 ### 6. Confiança dos Dados
 
 - **Objetivo:** impedir que o design esconda dados fracos.
-- **Cards:** volume, completude de engajamento e cobertura temporal.
+- **Cards:** eventos, sessões distintas e cobertura temporal.
 - **Volume diário:** evidencia lacunas de ingestão.
 - **Cobertura de eventos:** mostra quais famílias dominam a fonte.
 - **Checagens de linhagem:** documentam a origem dos cálculos.
@@ -92,5 +92,4 @@ Cada card mostra valor atual, direção, variação percentual e comparação co
 Os dados são históricos e ofuscados; associação de canal não é causalidade; receita não é lucro; retorno em vários dias não é retenção contratual; e uma demo pública não substitui controles de produção.
 # Interação principal: Árvore de Drivers
 
-Leia da esquerda para a direita. Uma base grande de usuários e sessões com forte queda em compras indica atrito na jornada ou no merchandising; compras saudáveis com receita fraca indicam problema de mix ou ticket. Todos os nós, gráficos, tabela, achado e ação usam o mesmo recorte filtrado.
-
+Leia da esquerda para a direita. Uma base grande de usuários e sessões com forte queda em compras indica atrito na jornada ou no merchandising; compras saudáveis com receita fraca indicam problema de mix ou ticket. Métricas, gráficos, achados e ações dinâmicos usam o mesmo recorte. O benchmark das etapas do funil é explicitamente integral porque o mart público não preserva flags intermediárias.
