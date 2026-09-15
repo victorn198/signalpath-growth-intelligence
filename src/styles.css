@@ -23,3 +23,4 @@
 .comparison-key{align-self:center;margin:0 auto;color:#66758a;font-size:10px;font-weight:600;white-space:nowrap}
 @media(max-width:640px){.chart-modes.split{flex-wrap:wrap}.chart-modes.split .comparison-key{order:3;width:100%;margin-top:4px;text-align:right}.chart-modes.split>div{min-width:0}.chart-modes.split button{padding:5px 6px}}
 .chart-viewport{max-width:100%}.chart-viewport>div,.chart-viewport canvas{max-width:100%!important}
+.comparison-key{display:flex;align-items:center;gap:10px}.comparison-key span{display:inline-flex;align-items:center;gap:4px}.comparison-key i{display:inline-block;width:14px;height:6px;border-radius:2px}.comparison-key i.current{background:#1f6feb}.comparison-key i.prior{background:#9aa7b8}

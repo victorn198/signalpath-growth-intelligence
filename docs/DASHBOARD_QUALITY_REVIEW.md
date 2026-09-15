@@ -14,7 +14,7 @@
 ## Visual and analytical rules
 
 - KPI cards summarize the selected period; charts explain time and segment structure.
-- Bars show the current period and compact reference markers show the comparable prior period.
+- Grouped bars show current and comparable prior periods side by side; the tooltip reports both values and their change.
 - Green and red encode favorable and unfavorable movement according to metric semantics.
 - The five-lens lab provides efficiency, change drivers, stability, concentration and scenario views without generative AI.
 - Journey stages are independent event audiences. They are not a certified sequential funnel.
