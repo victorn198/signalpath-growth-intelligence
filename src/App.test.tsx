@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest'
-import { concentrationStats, largestStageLeak, trendStats } from './innovation'
+import { concentrationStats, largestStageReachGap, trendStats } from './innovation'
 
 describe('SignalPath analytical contracts', () => {
-  it('finds the largest adjacent journey loss', () => {
-    const leak=largestStageLeak([{stage:'View',users:100},{stage:'Cart',users:55},{stage:'Purchase',users:40}])
-    expect(leak).toMatchObject({from:'View',to:'Cart',loss:45,lossRate:.45})
+  it('describes the largest adjacent reach gap without inferring abandonment', () => {
+    const gap=largestStageReachGap([{stage:'View',users:100},{stage:'Cart',users:55},{stage:'Purchase',users:40}])
+    expect(gap).toMatchObject({from:'View',to:'Cart',gap:45,gapRate:.45})
   })
 
   it('calculates time movement from first to last point', () => {

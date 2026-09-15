@@ -10,7 +10,7 @@ React and ECharts provide a custom product interface; DuckDB builds reproducible
 
 1. Start at **Executive Growth** to identify the largest deviation.
 2. Keep the same filter context while moving to the diagnostic page.
-3. Use **Funnel & Journey** for progression problems, **Acquisition Quality** for channel problems, **Product Performance** for demand problems, and **Repeat Behavior** for multi-day return behavior.
+3. Use **Journey Evidence** for reach gaps, **Acquisition Quality** for channel problems, **Product Performance** for demand problems, and **Repeat Behavior** for multi-day return behavior.
 4. Read the dark evidence statement before the recommended action.
 5. Use **Data Trust** before presenting a conclusion.
 6. Use **Restore default view** to return to the documented baseline.
@@ -45,7 +45,7 @@ Each KPI card contains the current value, direction, percentage change, and prio
 - **Country opportunity detail:** provides the underlying user and purchaser context for geographic prioritization.
 - **Decision use:** select the weakest stage and continue to the relevant diagnostic page.
 
-### 2. Funnel & Journey
+### 2. Journey Evidence
 
 **Purpose:** locate where observed journeys lose momentum.
 

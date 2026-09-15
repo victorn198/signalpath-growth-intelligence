@@ -24,9 +24,10 @@
         "purchases",
         "revenue"
       ],
-      "rows": 359708,
-      "bytes": 6212644,
-      "load": "initial-query"
+      "rows": 360974,
+      "bytes": 4561471,
+      "load": "BigQuery export 2026-09-14",
+      "source": "bigquery-public-data.ga4_obfuscated_sample_ecommerce via signalpath-analytics.signalpath.mart_growth_sessions"
     },
     "growth_products": {
       "file": "mart_growth_products.parquet",
@@ -45,9 +46,10 @@
         "units",
         "orders"
       ],
-      "rows": 12227,
-      "bytes": 60305,
-      "load": "on-demand"
+      "rows": 13661,
+      "bytes": 55229,
+      "load": "BigQuery export 2026-09-14",
+      "source": "bigquery-public-data.ga4_obfuscated_sample_ecommerce via signalpath-analytics.signalpath.mart_growth_products"
     }
   }
 }

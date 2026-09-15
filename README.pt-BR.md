@@ -1,11 +1,15 @@
 # SignalPath Growth Intelligence
 
+> Evidência atual: [reconciliação pós-exportação](docs/POST_EXPORT_RECONCILIATION.md) e [leitura analítica](docs/ANALYSIS_READOUT.pt-BR.md). O case é uma demonstração histórica, não desempenho de produção.
+
 **[Abrir demo ao vivo](https://signalpath-growth-intelligence.pages.dev/)** · [Read in English](README.md)
 
 ## Documentação
 
 - [Guia completo do dashboard](docs/DASHBOARD_GUIDE.pt-BR.md)
 - [Catálogo de métricas](docs/METRIC_CATALOG.md)
+- [Leitura analítica](docs/ANALYSIS_READOUT.pt-BR.md)
+- [Framework de qualidade](docs/ANALYTICS_QUALITY_FRAMEWORK.md)
 - [Roteiro de demonstração](docs/DEMO_GUIDE.md)
 
 ![Visão executiva do SignalPath](docs/images/pt/overview.png)
@@ -42,7 +46,7 @@ Todas as páginas oferecem cinco lentes analíticas determinísticas no lugar de
 O desenho segue padrões consolidados de exploração de funil e segmentos do GA4 e de decomposição, influenciadores e anomalias do Power BI. Todos os resultados respondem ao período e aos filtros; nenhum valor de insight é hardcoded.
 
 Os laboratórios secundários são próprios de cada pergunta: saúde e abandono da jornada, qualidade de aquisição e sensibilidade de verba, mix e velocidade de produtos, comportamento de retorno e atualização, integridade, reconciliação e prontidão dos dados.
-- A demo foi construída com 2,25 milhões de eventos e publica somente marts compactos.
+- O mart de sessões representa 4.295.584 eventos da fonte em 360.974 linhas analíticas; a demo publica somente marts compactos.
 - Os dados são ofuscados, históricos e podem conter valores substitutos ou inconsistências.
 
 ## Execução

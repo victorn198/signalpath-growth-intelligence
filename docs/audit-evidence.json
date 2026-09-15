@@ -1,0 +1,724 @@
+{
+  "generated_at_utc": "2026-09-14T03:30:30.318934+00:00",
+  "duckdb_version": "1.5.4",
+  "assessment": "Needs revision",
+  "scope": "Independent numeric and lineage audit only; no UI or pipeline changes.",
+  "inputs": {
+    "public/data/mart_growth_sessions.parquet": {
+      "sha256": "339ff33873dab0f18b85e0553221cc564573ba8d6238ab90d2abcbb4312a6939",
+      "bytes": 4561471
+    },
+    "public/data/mart_growth_products.parquet": {
+      "sha256": "87a6882cb9e7152f96b46e6f6331cb5326ec51d7d010394e3ac18bc445ae8537",
+      "bytes": 55229
+    },
+    "public/data/dashboard.json": {
+      "sha256": "0dca00fa0bee1e2bcd49eb1c73d5a9fb072775593b3abcfe93a9c6c04f210d67",
+      "bytes": 69244
+    },
+    "public/data/mart-manifest.json": {
+      "sha256": "3e293474320bb423d4e8dcc8292f9c68c7afe914f3eb60d1f9fd62d06ae607e1",
+      "bytes": 1396
+    },
+    "pipeline/__main__.py": {
+      "sha256": "3845e220b9f0956a86af87a5759c3cbf3c0153f9bfc2853227050751ef8b4430",
+      "bytes": 18904
+    },
+    "sql/extract_ga4.sql": {
+      "sha256": "57a872b56c200988ea924f03027b993c009199e44eebc6e3d7c9ae6d6d2d945c",
+      "bytes": 667
+    },
+    "src/queryMart.ts": {
+      "sha256": "f741b2731e2ce6d6206ce89cbda27e1a6b4f67f7ba37944667030ced1d23e2cd",
+      "bytes": 12371
+    },
+    "docs/METRIC_CATALOG.md": {
+      "sha256": "b96811f89e57fcd633cfe0f57dbe6582d9ece13e8274336c4feb4636081a192b",
+      "bytes": 1634
+    }
+  },
+  "source_views": [
+    {
+      "view": "events",
+      "readable": false,
+      "error_type": "IOException",
+      "reason": "Referenced source unavailable; absolute source path intentionally omitted."
+    },
+    {
+      "view": "products",
+      "readable": false,
+      "error_type": "IOException",
+      "reason": "Referenced source unavailable; absolute source path intentionally omitted."
+    }
+  ],
+  "raw_sources": {
+    "status": "absent_in_checked_locations",
+    "facts": {
+      "events": {
+        "available": false,
+        "path": null
+      },
+      "products": {
+        "available": false,
+        "path": null
+      }
+    },
+    "search": [
+      {
+        "root": "data/raw",
+        "exists": true,
+        "max_depth": 8,
+        "max_directories": 2500,
+        "skipped_directories": [
+          ".git",
+          ".home",
+          ".npm-cache",
+          ".pip-cache",
+          ".tmp",
+          ".venv",
+          ".wrangler",
+          "dist",
+          "node_modules"
+        ],
+        "directories_visited": 2,
+        "truncated": false
+      },
+      {
+        "root": "../agent-revenue-lab",
+        "exists": true,
+        "max_depth": 8,
+        "max_directories": 2500,
+        "skipped_directories": [
+          ".git",
+          ".home",
+          ".npm-cache",
+          ".pip-cache",
+          ".tmp",
+          ".venv",
+          ".wrangler",
+          "dist",
+          "node_modules"
+        ],
+        "directories_visited": 447,
+        "truncated": false
+      },
+      {
+        "root": "../../MovedFromC/Users/victo/AppData/Local/Temp/ga4-eda",
+        "exists": false,
+        "max_depth": 8,
+        "max_directories": 2500,
+        "skipped_directories": [
+          ".git",
+          ".home",
+          ".npm-cache",
+          ".pip-cache",
+          ".tmp",
+          ".venv",
+          ".wrangler",
+          "dist",
+          "node_modules"
+        ],
+        "directories_visited": 0,
+        "truncated": false
+      }
+    ]
+  },
+  "existing_dashboard_evidence": {
+    "meta_rows": 360974,
+    "period": "2020-11-01 \u2014 2021-01-31",
+    "executive_metrics": [
+      {
+        "id": "users",
+        "label": {
+          "en": "Active users",
+          "pt": "Usu\u00e1rios ativos"
+        },
+        "value": 269504,
+        "previous": null,
+        "format": "integer",
+        "improvement": "up"
+      },
+      {
+        "id": "sessions",
+        "label": {
+          "en": "Sessions",
+          "pt": "Sess\u00f5es"
+        },
+        "value": 358938,
+        "previous": null,
+        "format": "integer",
+        "improvement": "up"
+      },
+      {
+        "id": "conversion",
+        "label": {
+          "en": "User conversion",
+          "pt": "Convers\u00e3o de usu\u00e1rios"
+        },
+        "value": 0.013777161006886725,
+        "previous": null,
+        "format": "percent",
+        "improvement": "up"
+      },
+      {
+        "id": "orders",
+        "label": {
+          "en": "Purchases",
+          "pt": "Compras"
+        },
+        "value": 4466,
+        "previous": null,
+        "format": "integer",
+        "improvement": "up"
+      },
+      {
+        "id": "revenue",
+        "label": {
+          "en": "Tracked revenue",
+          "pt": "Receita rastreada"
+        },
+        "value": 328475,
+        "previous": null,
+        "format": "currency",
+        "improvement": "up"
+      }
+    ]
+  },
+  "manifest_checks": [
+    {
+      "mart": "growth_sessions",
+      "actual_rows": 360974,
+      "declared_rows": 360974,
+      "rows_match": true,
+      "bytes_match": true
+    },
+    {
+      "mart": "growth_products",
+      "actual_rows": 13661,
+      "declared_rows": 13661,
+      "rows_match": true,
+      "bytes_match": true
+    }
+  ],
+  "findings": [
+    {
+      "severity": "P1",
+      "id": "revenue_join_fanout",
+      "location": "pipeline/__main__.py",
+      "finding": "Revenue keyed by user/session is repeated across session-day/dimension rows.",
+      "evidence": {
+        "session_keys": 360129,
+        "split_keys": 845,
+        "extra_rows": 845,
+        "multi_day_keys": 845,
+        "multi_dimension_keys": 0,
+        "revenue_bearing_split_keys": 72,
+        "nonconstant_revenue_keys": 72,
+        "stored_revenue": 362165,
+        "revenue_once_per_key": 361929,
+        "repeated_revenue_excess": 236
+      },
+      "remedy": "Rebuild from item facts at an explicitly aligned day/dimension grain; do not deduplicate filtered windows using max(revenue)."
+    },
+    {
+      "severity": "P1",
+      "id": "cross_mart_revenue",
+      "location": "public/data",
+      "finding": "Session and product revenues differ even with identical global date bounds.",
+      "windows": {
+        "all": {
+          "session_revenue": 362165,
+          "product_revenue": 362110,
+          "difference": 55
+        },
+        "last30": {
+          "session_revenue": 56375,
+          "product_revenue": 56324,
+          "difference": 51
+        },
+        "previous30": {
+          "session_revenue": 150071,
+          "product_revenue": 150011,
+          "difference": 60
+        }
+      },
+      "remedy": "Use purchased-item mart for item revenue and disclose mismatch until source reconciliation."
+    },
+    {
+      "severity": "P1",
+      "id": "source_reproducibility",
+      "location": "sql/extract_ga4.sql",
+      "finding": "Checked source views cannot be read; event extractor omits marketing_channel and there is no purchased-item extractor. Existing pipeline validation checks shape/budgets, not reconciliation.",
+      "remedy": "Restore governed cleaned facts and include marketing-channel transformation and item extraction before claiming end-to-end reproduction."
+    },
+    {
+      "severity": "P1",
+      "id": "orders_nonadditive",
+      "location": "pipeline/__main__.py",
+      "finding": "Product orders count transaction memberships per product/day/dimension, not unique overall purchases. Session summed purchases cannot establish unique transactions without raw IDs.",
+      "all_product_order_memberships": 14375,
+      "all_session_summed_orders": 168235,
+      "remedy": "Label product counts as product-order memberships; retain transaction grain for unique filtered purchases."
+    },
+    {
+      "severity": "P1",
+      "id": "scope_date_anchors",
+      "location": "src/queryMart.ts",
+      "finding": "Original query computes maxima after filters separately per mart, allowing different periods and stale-scope resurrection. Main agent owns query changes; receipts establish data-level cases, not final UI behavior.",
+      "remedy": "Use one global session-calendar anchor for all marts and preserve empty/null states."
+    },
+    {
+      "severity": "P2",
+      "id": "overlapping_segment_users",
+      "location": "public/data/mart_growth_sessions.parquet",
+      "finding": "Distinct segment users are overlapping memberships and must not be summed as a partition.",
+      "remedy": "Label segment reach as nonexclusive and use overall distinct users as the denominator."
+    },
+    {
+      "severity": "P1",
+      "id": "synthetic_static_comparisons",
+      "location": "pipeline/__main__.py",
+      "finding": "dashboard.json previous sessions, conversion and revenue are fabricated multipliers (0.92, 0.94, 0.91); previous users/orders use half-history against full-history current values. This is a static payload issue, not a claim that the edited live query uses these baselines.",
+      "remedy": "Remove synthetic baselines or compute real equal-length comparisons before the static payload is used as evidence."
+    }
+  ],
+  "queries": {
+    "schemas": {
+      "sql": "SELECT table_name,column_name,data_type FROM information_schema.columns WHERE table_name IN ('sessions','products') ORDER BY table_name,ordinal_position",
+      "result": [
+        {
+          "table_name": "products",
+          "column_name": "event_date",
+          "data_type": "DATE"
+        },
+        {
+          "table_name": "products",
+          "column_name": "product_type",
+          "data_type": "VARCHAR"
+        },
+        {
+          "table_name": "products",
+          "column_name": "item_name",
+          "data_type": "VARCHAR"
+        },
+        {
+          "table_name": "products",
+          "column_name": "channel",
+          "data_type": "VARCHAR"
+        },
+        {
+          "table_name": "products",
+          "column_name": "device",
+          "data_type": "VARCHAR"
+        },
+        {
+          "table_name": "products",
+          "column_name": "country",
+          "data_type": "VARCHAR"
+        },
+        {
+          "table_name": "products",
+          "column_name": "revenue",
+          "data_type": "BIGINT"
+        },
+        {
+          "table_name": "products",
+          "column_name": "units",
+          "data_type": "BIGINT"
+        },
+        {
+          "table_name": "products",
+          "column_name": "orders",
+          "data_type": "BIGINT"
+        },
+        {
+          "table_name": "sessions",
+          "column_name": "event_date",
+          "data_type": "DATE"
+        },
+        {
+          "table_name": "sessions",
+          "column_name": "user_id",
+          "data_type": "DOUBLE"
+        },
+        {
+          "table_name": "sessions",
+          "column_name": "session_id",
+          "data_type": "BIGINT"
+        },
+        {
+          "table_name": "sessions",
+          "column_name": "channel",
+          "data_type": "VARCHAR"
+        },
+        {
+          "table_name": "sessions",
+          "column_name": "device",
+          "data_type": "VARCHAR"
+        },
+        {
+          "table_name": "sessions",
+          "column_name": "country",
+          "data_type": "VARCHAR"
+        },
+        {
+          "table_name": "sessions",
+          "column_name": "events",
+          "data_type": "BIGINT"
+        },
+        {
+          "table_name": "sessions",
+          "column_name": "purchased",
+          "data_type": "BOOLEAN"
+        },
+        {
+          "table_name": "sessions",
+          "column_name": "purchases",
+          "data_type": "BIGINT"
+        },
+        {
+          "table_name": "sessions",
+          "column_name": "revenue",
+          "data_type": "BIGINT"
+        }
+      ]
+    },
+    "bounds": {
+      "sql": "SELECT 'sessions' mart,min(event_date) first_date,max(event_date) last_date,count(DISTINCT event_date) active_days,count(*) row_count FROM sessions UNION ALL SELECT 'products',min(event_date),max(event_date),count(DISTINCT event_date),count(*) FROM products",
+      "result": [
+        {
+          "mart": "sessions",
+          "first_date": "2020-11-01",
+          "last_date": "2021-01-31",
+          "active_days": 92,
+          "row_count": 360974
+        },
+        {
+          "mart": "products",
+          "first_date": "2020-11-01",
+          "last_date": "2021-01-31",
+          "active_days": 92,
+          "row_count": 13661
+        }
+      ]
+    },
+    "all_metrics": {
+      "sql": "SELECT 'all' window_name,\n          count(*) mart_rows,count(DISTINCT user_id) users,\n          count(DISTINCT (user_id,session_id)) sessions,\n          count(DISTINCT concat(user_id,'|',session_id)) concat_sessions,\n          count(DISTINCT user_id) FILTER(WHERE purchased=1) purchasers,\n          sum(purchases) summed_orders,sum(revenue) session_revenue,sum(events) events,\n          count(DISTINCT event_date) active_days,\n          (SELECT sum(revenue) FROM products,bounds WHERE true) product_revenue,\n          (SELECT sum(orders) FROM products,bounds WHERE true) product_order_memberships,\n          (SELECT sum(units) FROM products,bounds WHERE true) product_units\n          FROM sessions,bounds WHERE true",
+      "result": [
+        {
+          "window_name": "all",
+          "mart_rows": 360974,
+          "users": 270154,
+          "sessions": 360129,
+          "concat_sessions": 360129,
+          "purchasers": 4419,
+          "summed_orders": 168235,
+          "session_revenue": 362165,
+          "events": 4295584,
+          "active_days": 92,
+          "product_revenue": 362110,
+          "product_order_memberships": 14375,
+          "product_units": 22720
+        }
+      ]
+    },
+    "all_segment_overlap": {
+      "sql": "WITH scoped AS (SELECT * FROM sessions,bounds WHERE true),\n          memberships AS (\n          SELECT 'channel' dimension,user_id,count(DISTINCT channel) memberships FROM scoped GROUP BY user_id\n          UNION ALL SELECT 'device',user_id,count(DISTINCT device) FROM scoped GROUP BY user_id\n          UNION ALL SELECT 'country',user_id,count(DISTINCT country) FROM scoped GROUP BY user_id)\n          SELECT dimension,count(*) users,sum(memberships) summed_segment_users,\n          count(*) FILTER(WHERE memberships>1) multi_segment_users,\n          sum(memberships)-count(*) excess_memberships FROM memberships GROUP BY dimension ORDER BY dimension",
+      "result": [
+        {
+          "dimension": "channel",
+          "users": 270154,
+          "summed_segment_users": 314255,
+          "multi_segment_users": 36299,
+          "excess_memberships": 44101
+        },
+        {
+          "dimension": "country",
+          "users": 270154,
+          "summed_segment_users": 270154,
+          "multi_segment_users": 0,
+          "excess_memberships": 0
+        },
+        {
+          "dimension": "device",
+          "users": 270154,
+          "summed_segment_users": 274362,
+          "multi_segment_users": 4182,
+          "excess_memberships": 4208
+        }
+      ]
+    },
+    "last30_metrics": {
+      "sql": "SELECT 'last30' window_name,\n          count(*) mart_rows,count(DISTINCT user_id) users,\n          count(DISTINCT (user_id,session_id)) sessions,\n          count(DISTINCT concat(user_id,'|',session_id)) concat_sessions,\n          count(DISTINCT user_id) FILTER(WHERE purchased=1) purchasers,\n          sum(purchases) summed_orders,sum(revenue) session_revenue,sum(events) events,\n          count(DISTINCT event_date) active_days,\n          (SELECT sum(revenue) FROM products,bounds WHERE event_date BETWEEN hi-29 AND hi) product_revenue,\n          (SELECT sum(orders) FROM products,bounds WHERE event_date BETWEEN hi-29 AND hi) product_order_memberships,\n          (SELECT sum(units) FROM products,bounds WHERE event_date BETWEEN hi-29 AND hi) product_units\n          FROM sessions,bounds WHERE event_date BETWEEN hi-29 AND hi",
+      "result": [
+        {
+          "window_name": "last30",
+          "mart_rows": 116307,
+          "users": 92825,
+          "sessions": 116075,
+          "concat_sessions": 116075,
+          "purchasers": 1057,
+          "summed_orders": 51387,
+          "session_revenue": 56375,
+          "events": 1188051,
+          "active_days": 30,
+          "product_revenue": 56324,
+          "product_order_memberships": 2663,
+          "product_units": 3368
+        }
+      ]
+    },
+    "last30_segment_overlap": {
+      "sql": "WITH scoped AS (SELECT * FROM sessions,bounds WHERE event_date BETWEEN hi-29 AND hi),\n          memberships AS (\n          SELECT 'channel' dimension,user_id,count(DISTINCT channel) memberships FROM scoped GROUP BY user_id\n          UNION ALL SELECT 'device',user_id,count(DISTINCT device) FROM scoped GROUP BY user_id\n          UNION ALL SELECT 'country',user_id,count(DISTINCT country) FROM scoped GROUP BY user_id)\n          SELECT dimension,count(*) users,sum(memberships) summed_segment_users,\n          count(*) FILTER(WHERE memberships>1) multi_segment_users,\n          sum(memberships)-count(*) excess_memberships FROM memberships GROUP BY dimension ORDER BY dimension",
+      "result": [
+        {
+          "dimension": "channel",
+          "users": 92825,
+          "summed_segment_users": 104919,
+          "multi_segment_users": 10230,
+          "excess_memberships": 12094
+        },
+        {
+          "dimension": "country",
+          "users": 92825,
+          "summed_segment_users": 92825,
+          "multi_segment_users": 0,
+          "excess_memberships": 0
+        },
+        {
+          "dimension": "device",
+          "users": 92825,
+          "summed_segment_users": 93368,
+          "multi_segment_users": 542,
+          "excess_memberships": 543
+        }
+      ]
+    },
+    "previous30_metrics": {
+      "sql": "SELECT 'previous30' window_name,\n          count(*) mart_rows,count(DISTINCT user_id) users,\n          count(DISTINCT (user_id,session_id)) sessions,\n          count(DISTINCT concat(user_id,'|',session_id)) concat_sessions,\n          count(DISTINCT user_id) FILTER(WHERE purchased=1) purchasers,\n          sum(purchases) summed_orders,sum(revenue) session_revenue,sum(events) events,\n          count(DISTINCT event_date) active_days,\n          (SELECT sum(revenue) FROM products,bounds WHERE event_date BETWEEN hi-59 AND hi-30) product_revenue,\n          (SELECT sum(orders) FROM products,bounds WHERE event_date BETWEEN hi-59 AND hi-30) product_order_memberships,\n          (SELECT sum(units) FROM products,bounds WHERE event_date BETWEEN hi-59 AND hi-30) product_units\n          FROM sessions,bounds WHERE event_date BETWEEN hi-59 AND hi-30",
+      "result": [
+        {
+          "window_name": "previous30",
+          "mart_rows": 126165,
+          "users": 99543,
+          "sessions": 125893,
+          "concat_sessions": 125893,
+          "purchasers": 1828,
+          "summed_orders": 57450,
+          "session_revenue": 150071,
+          "events": 1496185,
+          "active_days": 30,
+          "product_revenue": 150011,
+          "product_order_memberships": 6193,
+          "product_units": 9593
+        }
+      ]
+    },
+    "previous30_segment_overlap": {
+      "sql": "WITH scoped AS (SELECT * FROM sessions,bounds WHERE event_date BETWEEN hi-59 AND hi-30),\n          memberships AS (\n          SELECT 'channel' dimension,user_id,count(DISTINCT channel) memberships FROM scoped GROUP BY user_id\n          UNION ALL SELECT 'device',user_id,count(DISTINCT device) FROM scoped GROUP BY user_id\n          UNION ALL SELECT 'country',user_id,count(DISTINCT country) FROM scoped GROUP BY user_id)\n          SELECT dimension,count(*) users,sum(memberships) summed_segment_users,\n          count(*) FILTER(WHERE memberships>1) multi_segment_users,\n          sum(memberships)-count(*) excess_memberships FROM memberships GROUP BY dimension ORDER BY dimension",
+      "result": [
+        {
+          "dimension": "channel",
+          "users": 99543,
+          "summed_segment_users": 113134,
+          "multi_segment_users": 11519,
+          "excess_memberships": 13591
+        },
+        {
+          "dimension": "country",
+          "users": 99543,
+          "summed_segment_users": 99543,
+          "multi_segment_users": 0,
+          "excess_memberships": 0
+        },
+        {
+          "dimension": "device",
+          "users": 99543,
+          "summed_segment_users": 100493,
+          "multi_segment_users": 949,
+          "excess_memberships": 950
+        }
+      ]
+    },
+    "session_declared_grain_duplicates": {
+      "sql": "SELECT count(*) duplicate_groups,coalesce(sum(n-1),0) extra_rows FROM\n      (SELECT count(*) n FROM sessions GROUP BY event_date,user_id,session_id,channel,device,country HAVING count(*)>1)",
+      "result": [
+        {
+          "duplicate_groups": 0,
+          "extra_rows": 0
+        }
+      ]
+    },
+    "product_declared_grain_duplicates": {
+      "sql": "SELECT count(*) duplicate_groups,coalesce(sum(n-1),0) extra_rows FROM\n      (SELECT count(*) n FROM products GROUP BY event_date,product_type,item_name,channel,device,country HAVING count(*)>1)",
+      "result": [
+        {
+          "duplicate_groups": 0,
+          "extra_rows": 0
+        }
+      ]
+    },
+    "split_session_revenue": {
+      "sql": "WITH grouped AS (SELECT user_id,session_id,count(*) n,\n      count(DISTINCT event_date) dates,count(DISTINCT (channel,device,country)) dimensions,\n      min(revenue) min_revenue,max(revenue) max_revenue,sum(revenue) total_revenue,\n      sum(purchases) purchases FROM sessions GROUP BY user_id,session_id)\n      SELECT count(*) session_keys,count(*) FILTER(WHERE n>1) split_keys,\n      sum(n-1) extra_rows,count(*) FILTER(WHERE dates>1) multi_day_keys,\n      count(*) FILTER(WHERE dimensions>1) multi_dimension_keys,\n      count(*) FILTER(WHERE n>1 AND max_revenue<>0) revenue_bearing_split_keys,\n      count(*) FILTER(WHERE min_revenue<>max_revenue) nonconstant_revenue_keys,\n      sum(total_revenue) stored_revenue,sum(max_revenue) revenue_once_per_key,\n      sum(total_revenue-max_revenue) repeated_revenue_excess FROM grouped",
+      "result": [
+        {
+          "session_keys": 360129,
+          "split_keys": 845,
+          "extra_rows": 845,
+          "multi_day_keys": 845,
+          "multi_dimension_keys": 0,
+          "revenue_bearing_split_keys": 72,
+          "nonconstant_revenue_keys": 72,
+          "stored_revenue": 362165,
+          "revenue_once_per_key": 361929,
+          "repeated_revenue_excess": 236
+        }
+      ]
+    },
+    "identity_nulls": {
+      "sql": "SELECT count(*) FILTER(WHERE user_id IS NULL) null_users,\n      count(*) FILTER(WHERE session_id IS NULL) null_sessions,\n      count(*) FILTER(WHERE event_date IS NULL) null_dates,\n      count(*) FILTER(WHERE purchased NOT IN (0,1)) invalid_purchase_flags FROM sessions",
+      "result": [
+        {
+          "null_users": 0,
+          "null_sessions": 0,
+          "null_dates": 0,
+          "invalid_purchase_flags": 0
+        }
+      ]
+    },
+    "revenue_without_purchase_flags": {
+      "sql": "SELECT count(*) row_count,sum(revenue) revenue FROM sessions WHERE revenue<>0 AND purchased=0",
+      "result": [
+        {
+          "row_count": 0,
+          "revenue": null
+        }
+      ]
+    },
+    "lagging_scope_anchors": {
+      "sql": "WITH anchors AS (\n      SELECT 'sessions' mart,channel,device,country,max(event_date) last_date,count(*) row_count FROM sessions GROUP BY ALL\n      UNION ALL SELECT 'products',channel,device,country,max(event_date),count(*) FROM products GROUP BY ALL)\n      SELECT mart,count(*) scopes,count(*) FILTER(WHERE last_date<hi) lagging_scopes,\n      min(last_date) earliest_scope_anchor,max(hi-last_date) max_lag_days FROM anchors,bounds GROUP BY mart",
+      "result": [
+        {
+          "mart": "products",
+          "scopes": 485,
+          "lagging_scopes": 469,
+          "earliest_scope_anchor": "2020-11-02",
+          "max_lag_days": 90
+        },
+        {
+          "mart": "sessions",
+          "scopes": 1161,
+          "lagging_scopes": 744,
+          "earliest_scope_anchor": "2020-11-02",
+          "max_lag_days": 90
+        }
+      ]
+    },
+    "anchor_examples": {
+      "sql": "WITH anchors AS (SELECT channel,device,country,max(event_date) last_date FROM products GROUP BY ALL)\n      SELECT channel,device,country,last_date,hi global_anchor,\n      (SELECT max(s.event_date) FROM sessions s WHERE s.channel=a.channel AND s.device=a.device AND s.country=a.country) session_scope_anchor,\n      (SELECT sum(p.revenue) FROM products p WHERE p.channel=a.channel AND p.device=a.device AND p.country=a.country AND p.event_date BETWEEN hi-29 AND hi) global_last30_revenue,\n      (SELECT sum(p.revenue) FROM products p WHERE p.channel=a.channel AND p.device=a.device AND p.country=a.country AND p.event_date BETWEEN last_date-29 AND last_date) local_last30_revenue\n      FROM anchors a,bounds WHERE last_date<hi ORDER BY last_date,channel,device,country LIMIT 5",
+      "result": [
+        {
+          "channel": "organic",
+          "device": "mobile",
+          "country": "Lebanon",
+          "last_date": "2020-11-02",
+          "global_anchor": "2021-01-31",
+          "session_scope_anchor": "2021-01-29",
+          "global_last30_revenue": null,
+          "local_last30_revenue": 175
+        },
+        {
+          "channel": "referral",
+          "device": "desktop",
+          "country": "Ecuador",
+          "last_date": "2020-11-03",
+          "global_anchor": "2021-01-31",
+          "session_scope_anchor": "2021-01-30",
+          "global_last30_revenue": null,
+          "local_last30_revenue": 142
+        },
+        {
+          "channel": "direct",
+          "device": "desktop",
+          "country": "Pakistan",
+          "last_date": "2020-11-04",
+          "global_anchor": "2021-01-31",
+          "session_scope_anchor": "2021-01-31",
+          "global_last30_revenue": null,
+          "local_last30_revenue": 24
+        },
+        {
+          "channel": "referral",
+          "device": "desktop",
+          "country": "Guatemala",
+          "last_date": "2020-11-04",
+          "global_anchor": "2021-01-31",
+          "session_scope_anchor": "2021-01-30",
+          "global_last30_revenue": null,
+          "local_last30_revenue": 84
+        },
+        {
+          "channel": "direct",
+          "device": "mobile",
+          "country": "Nigeria",
+          "last_date": "2020-11-05",
+          "global_anchor": "2021-01-31",
+          "session_scope_anchor": "2021-01-28",
+          "global_last30_revenue": null,
+          "local_last30_revenue": 70
+        }
+      ]
+    },
+    "empty_scope": {
+      "sql": "SELECT count(*) row_count,count(DISTINCT user_id) users,sum(revenue) revenue,\n      min(event_date) local_start,max(event_date) local_end FROM sessions WHERE channel='__audit_absent_scope__' ",
+      "result": [
+        {
+          "row_count": 0,
+          "users": 0,
+          "revenue": null,
+          "local_start": null,
+          "local_end": null
+        }
+      ]
+    },
+    "session_scopes_without_products": {
+      "sql": "SELECT count(*) scopes FROM\n      (SELECT DISTINCT channel,device,country FROM sessions EXCEPT SELECT DISTINCT channel,device,country FROM products)",
+      "result": [
+        {
+          "scopes": 676
+        }
+      ]
+    },
+    "global_windows": {
+      "sql": "SELECT lo,hi,hi-29 last30_start,hi-59 previous30_start,hi-30 previous30_end FROM bounds",
+      "result": [
+        {
+          "lo": "2020-11-01",
+          "hi": "2021-01-31",
+          "last30_start": "2021-01-02",
+          "previous30_start": "2020-12-03",
+          "previous30_end": "2021-01-01"
+        }
+      ]
+    },
+    "unfiltered_product_anchor_difference": {
+      "sql": "SELECT\n      (SELECT max(event_date) FROM products) product_anchor,hi global_anchor,\n      (SELECT sum(revenue) FROM products WHERE event_date BETWEEN\n        (SELECT max(event_date)-29 FROM products) AND (SELECT max(event_date) FROM products)) product_local_last30_revenue,\n      (SELECT sum(revenue) FROM products WHERE event_date BETWEEN hi-29 AND hi) product_global_last30_revenue\n      FROM bounds",
+      "result": [
+        {
+          "product_anchor": "2021-01-31",
+          "global_anchor": "2021-01-31",
+          "product_local_last30_revenue": 56324,
+          "product_global_last30_revenue": 56324
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Public marts and dashboard.json share pipeline lineage; agreement is not raw-source verification.",
+    "No browser/render review; main agent owns query/App/components and another owns innovation.",
+    "Bounded raw search does not establish absence outside checked directories or under other filenames.",
+    "Distinct transaction IDs are absent from marts; summed orders are not independently certified unique.",
+    "Once-per-session revenue is a diagnostic, not an authoritative corrected revenue total.",
+    "Concurrent edits to other files can supersede the hashed code snapshot."
+  ]
+}

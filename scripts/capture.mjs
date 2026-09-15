@@ -20,12 +20,12 @@ try {
   const count = await buttons.count()
   for (let index = 0; index < count; index++) {
     const button = buttons.nth(index); const name = slug(await button.innerText())
-    await button.click(); await page.locator('.decision-strip:not(.is-loading)').waitFor({ timeout: 90000 })
+    await button.click(); await page.locator('.decision-strip:not(.is-loading)').waitFor({ timeout: 90000 }); await page.waitForTimeout(1200)
     await page.screenshot({ path: `docs/images/en/${name}.png`, fullPage: true })
   }
-  await page.getByRole('button', { name: 'PT' }).click(); await page.waitForTimeout(250)
+  await page.getByRole('button', { name: 'PT' }).click(); await page.waitForTimeout(1200)
   await page.screenshot({ path: 'docs/images/pt/overview.png', fullPage: true })
-  await page.setViewportSize({ width: 390, height: 844 }); await page.reload({ waitUntil: 'networkidle' })
+  await page.setViewportSize({ width: 390, height: 844 }); await page.reload({ waitUntil: 'networkidle' }); await page.waitForTimeout(1200)
   await page.screenshot({ path: 'docs/images/mobile.png', fullPage: true })
   await browser.close()
 } finally {

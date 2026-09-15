@@ -78,13 +78,14 @@ def build(events: Path, products: Path) -> None:
     repeat = scalar("""WITH u AS (SELECT user_id, count(DISTINCT event_date::DATE) AS active_days FROM events GROUP BY 1)
         SELECT count(*) FILTER (WHERE active_days > 1)::DOUBLE/nullif(count(*),0) FROM u""")
 
-    metric = lambda i, en, pt, value, previous, fmt="integer", improvement="up": {"id": i, "label": _loc(en, pt), "value": value, "previous": previous, "format": fmt, "improvement": improvement}
+    # Metadata covers full history, so it has no comparable prior period.
+    metric = lambda i, en, pt, value, previous, fmt="integer", improvement="up": {"id": i, "label": _loc(en, pt), "value": value, "previous": None, "format": fmt, "improvement": improvement}
     base_metrics = [
         metric("users", "Active users", "Usuários ativos", users, previous_users),
-        metric("sessions", "Sessions", "Sessões", sessions, sessions * .92),
-        metric("conversion", "User conversion", "Conversão de usuários", purchasers / users if users else 0, (purchasers / users if users else 0) * .94, "percent"),
+        metric("sessions", "Sessions", "Sessões", sessions, None),
+        metric("conversion", "User conversion", "Conversão de usuários", purchasers / users if users else 0, None, "percent"),
         metric("orders", "Purchases", "Compras", purchases, previous_purchases),
-        metric("revenue", "Tracked revenue", "Receita rastreada", revenue, revenue * .91, "currency"),
+        metric("revenue", "Tracked revenue", "Receita rastreada", revenue, None, "currency"),
     ]
     pages = [
         ("executive", "Executive Growth", "Crescimento Executivo", "Growth pulse", "Pulso de crescimento", "Where is growth healthy, and where is the funnel leaking?", "Onde o crescimento está saudável e onde o funil perde usuários?", base_metrics, "Daily active users", "Usuários ativos por dia", trend, "Acquisition mix", "Mix de aquisição", channels, countries, "Country opportunity detail", "Detalhe de oportunidade por país", "Conversion is concentrated in a narrow share of active users; channel quality matters more than raw traffic.", "A conversão está concentrada em uma pequena parcela dos usuários ativos; qualidade do canal importa mais que tráfego bruto.", "Shift budget tests toward channels with repeatable purchase intent and validate tracking before scaling.", "Direcione testes de orçamento para canais com intenção de compra recorrente e valide o rastreamento antes de escalar."),
@@ -107,8 +108,11 @@ def build(events: Path, products: Path) -> None:
                max(is_purchase::INTEGER) AS purchased, count(DISTINCT transaction_id) FILTER(WHERE is_purchase) AS purchases
         FROM events GROUP BY 1,2,3,4,5,6
       ), session_revenue AS (
-        SELECT user_id, session_id, sum(item_revenue) FILTER(WHERE is_purchase) AS revenue FROM products GROUP BY 1,2
-      ) SELECT s.*, coalesce(r.revenue,0) AS revenue FROM session_events s LEFT JOIN session_revenue r USING(user_id,session_id)
+        SELECT event_date::DATE AS event_date,user_id,session_id,
+               coalesce(marketing_channel,'Unknown') AS channel,coalesce(device,'Unknown') AS device,
+               coalesce(country,'Unknown') AS country,sum(item_revenue) FILTER(WHERE is_purchase) AS revenue
+        FROM products GROUP BY 1,2,3,4,5,6
+      ) SELECT s.*, coalesce(r.revenue,0) AS revenue FROM session_events s LEFT JOIN session_revenue r USING(event_date,user_id,session_id,channel,device,country)
     ) TO '{(out / 'mart_growth_sessions.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
     con.execute(f"""COPY (
         SELECT event_date::DATE AS event_date,

@@ -10,6 +10,7 @@ dist/
 .env
 data/raw/
 data/*.duckdb
+data/*.zip
 test-results/
 playwright-report/
 __pycache__/

@@ -1,6 +1,8 @@
 # SignalPath Growth Intelligence
 
-A bilingual product analytics case that turns public GA4 event data into decisions about acquisition quality, funnel friction, product demand, and return behavior.
+> Current evidence: [post-export reconciliation](docs/POST_EXPORT_RECONCILIATION.md) and [analysis readout](docs/ANALYSIS_READOUT.md). The case remains a historical demonstration, not production performance.
+
+A bilingual product analytics case that turns public GA4 event data into decisions about acquisition quality, journey evidence, product demand, and return behavior.
 
 **[Open the live demo](https://signalpath-growth-intelligence.pages.dev/)** · [Leia em português](README.pt-BR.md)
 
@@ -14,14 +16,14 @@ Growth teams often optimize sessions and clicks while losing sight of qualified 
 
 - Official source: `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*`.
 - Public Google Merchandise Store sample, 1 Nov 2020 to 31 Jan 2021.
-- Demo built from 2.25M event rows; only compact derived marts are published.
+- The exported session mart represents 4,295,584 source events across 360,974 analytical rows; only compact derived marts are published.
 - The sample is obfuscated and may contain placeholders or internal inconsistencies.
 
 ## Decision experience
 
-`Executive Growth` → `Funnel & Journey` → `Acquisition Quality` → `Product Performance` → `Repeat Behavior` → `Data Trust`
+`Executive Growth` → `Journey Evidence` → `Acquisition Quality` → `Product Performance` → `Repeat Behavior` → `Data Trust`
 
-Each page follows situation, explanation, opportunity, and action. KPIs and comparisons are computed by the pipeline rather than written into the interface.
+Each page follows situation, explanation, opportunity, and action. Live KPIs and comparisons are queried from compact marts in the browser. Metadata priors are unavailable rather than synthetic.
 
 ## Architecture
 
@@ -32,7 +34,7 @@ The public app is static and can be hosted at zero fixed cost. The compact Parqu
 ### Mart strategy and loading
 
 - `mart_growth_sessions.parquet` preserves the user/session/day grain required for reach, purchases, acquisition, multi-day return behavior, and trust calculations. Intermediate funnel flags remain available only as a full-source reference.
-- `mart_growth_products.parquet` materializes only purchased product-day aggregates and is loaded on demand when Product Performance is opened.
+- `mart_growth_products.parquet` holds purchased product-day aggregates (about 60 KB). It is loaded for all revenue calculations; legacy session revenue is not additive across days.
 - DuckDB-WASM applies Parquet column projection and filter pushdown, so queries scan only the columns and row groups needed by the selected period and filters.
 - `mart-manifest.json` documents grain, capabilities, row counts, byte size, and loading policy. Pipeline validation enforces required columns and size budgets.
 - New business questions must be mapped to required metrics, dimensions, grain, and filter behavior before a mart is reduced. Unsupported views must be labeled explicitly rather than silently falling back to static totals.
@@ -43,8 +45,8 @@ Every page includes five deterministic analytical lenses instead of a repeated g
 
 1. **Efficiency**: sessions per user, purchaser rate, purchases per buyer, and revenue per purchase.
 2. **Change drivers**: largest absolute channel changes against the selected prior window.
-3. **Anomalies**: robust z-scores based on the median absolute deviation, with a transparent `|z| ≥ 3.5` threshold.
-4. **Concentration**: top-three share and the Herfindahl-Hirschman Index as distribution diagnostics, not causal or regulatory conclusions.
+3. **Stability**: descriptive daily coefficient of variation, not anomaly detection.
+4. **Concentration**: top-three user-segment membership share, not exclusive user attribution or HHI.
 5. **Scenario**: a user-controlled relative conversion uplift translated linearly into purchases and revenue; explicitly a sensitivity calculation, not a forecast.
 
 The design is informed by established exploration patterns such as GA4 funnel/segment explorations and Power BI decomposition, influencer, and anomaly views. Every result responds to the current period and filters; no insight value is hardcoded.
@@ -75,7 +77,7 @@ Validate with `python -m pipeline validate`, `pytest`, `npm test`, `npm run buil
 
 The same model can connect to a company's GA4 export, backend orders, media costs, and experimentation data. [Discuss a similar project](mailto:victorn198@outlook.com).
 
-See also [Portuguese documentation](README.pt-BR.md), [complete dashboard guide](docs/DASHBOARD_GUIDE.md), [metric catalog](docs/METRIC_CATALOG.md), and [demo guide](docs/DEMO_GUIDE.md).
+See also [Portuguese documentation](README.pt-BR.md), [Portuguese analysis readout](docs/ANALYSIS_READOUT.pt-BR.md), [complete dashboard guide](docs/DASHBOARD_GUIDE.md), [dashboard quality review](docs/DASHBOARD_QUALITY_REVIEW.md), [metric catalog](docs/METRIC_CATALOG.md), [quality framework](docs/ANALYTICS_QUALITY_FRAMEWORK.md), and [demo guide](docs/DEMO_GUIDE.md).
 # Design innovation
 
 The **Growth Driver Tree** links active users, sessions, purchases, and tracked revenue in one decision path. It is recalculated with every filter and is designed to reveal where growth loses momentum before a team scales acquisition.

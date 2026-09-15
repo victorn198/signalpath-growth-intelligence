@@ -2,8 +2,8 @@
   "meta": {
     "source": "Google GA4 public ecommerce sample",
     "period": "2020-11-01 — 2021-01-31",
-    "builtAt": "2026-08-20",
-    "rows": 2251084,
+    "builtAt": "2026-09-14",
+    "rows": 360974,
     "limitations": {
       "en": "Obfuscated three-month Google Merchandise Store sample. It represents behavioral analytics patterns, not current business performance.",
       "pt": "Amostra ofuscada de três meses da Google Merchandise Store. Representa padrões analíticos, não desempenho atual."
@@ -68,8 +68,8 @@
             "en": "Active users",
             "pt": "Usuários ativos"
           },
-          "value": 269504.0,
-          "previous": 138438.0,
+          "value": 269504,
+          "previous": null,
           "format": "integer",
           "improvement": "up"
         },
@@ -79,8 +79,8 @@
             "en": "Sessions",
             "pt": "Sessões"
           },
-          "value": 358938.0,
-          "previous": 330222.96,
+          "value": 358938,
+          "previous": null,
           "format": "integer",
           "improvement": "up"
         },
@@ -91,7 +91,7 @@
             "pt": "Conversão de usuários"
           },
           "value": 0.013777161006886725,
-          "previous": 0.012950531346473521,
+          "previous": null,
           "format": "percent",
           "improvement": "up"
         },
@@ -101,8 +101,8 @@
             "en": "Purchases",
             "pt": "Compras"
           },
-          "value": 4466.0,
-          "previous": 2925.0,
+          "value": 4466,
+          "previous": null,
           "format": "integer",
           "improvement": "up"
         },
@@ -112,8 +112,8 @@
             "en": "Tracked revenue",
             "pt": "Receita rastreada"
           },
-          "value": 328475.0,
-          "previous": 298912.25,
+          "value": 328475,
+          "previous": null,
           "format": "currency",
           "improvement": "up"
         }
@@ -624,8 +624,8 @@
             "en": "Active users",
             "pt": "Usuários ativos"
           },
-          "value": 269504.0,
-          "previous": 138438.0,
+          "value": 269504,
+          "previous": null,
           "format": "integer",
           "improvement": "up"
         },
@@ -635,8 +635,8 @@
             "en": "Sessions",
             "pt": "Sessões"
           },
-          "value": 358938.0,
-          "previous": 330222.96,
+          "value": 358938,
+          "previous": null,
           "format": "integer",
           "improvement": "up"
         },
@@ -647,7 +647,7 @@
             "pt": "Conversão de usuários"
           },
           "value": 0.013777161006886725,
-          "previous": 0.012950531346473521,
+          "previous": null,
           "format": "percent",
           "improvement": "up"
         },
@@ -657,8 +657,8 @@
             "en": "Purchases",
             "pt": "Compras"
           },
-          "value": 4466.0,
-          "previous": 2925.0,
+          "value": 4466,
+          "previous": null,
           "format": "integer",
           "improvement": "up"
         }
@@ -1152,8 +1152,8 @@
             "en": "Active users",
             "pt": "Usuários ativos"
           },
-          "value": 269504.0,
-          "previous": 138438.0,
+          "value": 269504,
+          "previous": null,
           "format": "integer",
           "improvement": "up"
         },
@@ -1163,8 +1163,8 @@
             "en": "Sessions",
             "pt": "Sessões"
           },
-          "value": 358938.0,
-          "previous": 330222.96,
+          "value": 358938,
+          "previous": null,
           "format": "integer",
           "improvement": "up"
         },
@@ -1175,7 +1175,7 @@
             "pt": "Conversão de usuários"
           },
           "value": 0.013777161006886725,
-          "previous": 0.012950531346473521,
+          "previous": null,
           "format": "percent",
           "improvement": "up"
         },
@@ -1185,8 +1185,8 @@
             "en": "Purchases",
             "pt": "Compras"
           },
-          "value": 4466.0,
-          "previous": 2925.0,
+          "value": 4466,
+          "previous": null,
           "format": "integer",
           "improvement": "up"
         }
@@ -1668,7 +1668,7 @@
             "pt": "Conversão de usuários"
           },
           "value": 0.013777161006886725,
-          "previous": 0.012950531346473521,
+          "previous": null,
           "format": "percent",
           "improvement": "up"
         },
@@ -1678,8 +1678,8 @@
             "en": "Purchases",
             "pt": "Compras"
           },
-          "value": 4466.0,
-          "previous": 2925.0,
+          "value": 4466,
+          "previous": null,
           "format": "integer",
           "improvement": "up"
         },
@@ -1689,8 +1689,8 @@
             "en": "Tracked revenue",
             "pt": "Receita rastreada"
           },
-          "value": 328475.0,
-          "previous": 298912.25,
+          "value": 328475,
+          "previous": null,
           "format": "currency",
           "improvement": "up"
         }
@@ -2076,72 +2076,72 @@
       "breakdown": [
         {
           "name": "others",
-          "value": 78418.0,
+          "value": 78418,
           "units": 7244
         },
         {
           "name": "t-shirt",
-          "value": 42685.0,
+          "value": 42685,
           "units": 2289
         },
         {
           "name": "hoodie",
-          "value": 39411.0,
+          "value": 39411,
           "units": 917
         },
         {
           "name": "sweatshirt",
-          "value": 38606.0,
+          "value": 38606,
           "units": 836
         },
         {
           "name": "outerwear",
-          "value": 30025.0,
+          "value": 30025,
           "units": 434
         },
         {
           "name": "drinkware",
-          "value": 27991.0,
+          "value": 27991,
           "units": 1793
         },
         {
           "name": "bags",
-          "value": 27496.0,
+          "value": 27496,
           "units": 1748
         },
         {
           "name": "headwear",
-          "value": 16587.0,
+          "value": 16587,
           "units": 1190
         },
         {
           "name": "stationery",
-          "value": 11589.0,
+          "value": 11589,
           "units": 1272
         },
         {
           "name": "socks",
-          "value": 7273.0,
+          "value": 7273,
           "units": 529
         },
         {
           "name": "stickers",
-          "value": 3333.0,
+          "value": 3333,
           "units": 1989
         },
         {
           "name": "onesie",
-          "value": 2989.0,
+          "value": 2989,
           "units": 172
         },
         {
           "name": "pin",
-          "value": 1622.0,
+          "value": 1622,
           "units": 351
         },
         {
           "name": "gift cards",
-          "value": 450.0,
+          "value": 450,
           "units": 12
         }
       ],
@@ -2153,140 +2153,140 @@
         {
           "product": "Google Zip Hoodie F/C",
           "category": "hoodie",
-          "revenue": 11124.0,
+          "revenue": 11124,
           "units": 221,
           "orders": 187
         },
         {
           "product": "Google Crewneck Sweatshirt Navy",
           "category": "sweatshirt",
-          "revenue": 10714.0,
+          "revenue": 10714,
           "units": 236,
           "orders": 196
         },
         {
           "product": "Google Badge Heavyweight Pullover Black",
           "category": "sweatshirt",
-          "revenue": 9518.0,
+          "revenue": 9518,
           "units": 197,
           "orders": 150
         },
         {
           "product": "Google Men's Tech Fleece Grey",
           "category": "others",
-          "revenue": 9182.0,
+          "revenue": 9182,
           "units": 124,
           "orders": 87
         },
         {
           "product": "Super G Unisex Joggers",
           "category": "others",
-          "revenue": 8267.0,
+          "revenue": 8267,
           "units": 266,
           "orders": 221
         },
         {
           "product": "Google Crewneck Sweatshirt Green",
           "category": "sweatshirt",
-          "revenue": 7898.0,
+          "revenue": 7898,
           "units": 173,
           "orders": 146
         },
         {
           "product": "Google Men's Puff Jacket Black",
           "category": "outerwear",
-          "revenue": 5658.0,
+          "revenue": 5658,
           "units": 59,
           "orders": 52
         },
         {
           "product": "Google Men's Tech Fleece Vest Charcoal",
           "category": "outerwear",
-          "revenue": 5422.0,
+          "revenue": 5422,
           "units": 82,
           "orders": 62
         },
         {
           "product": "Google Sherpa Zip Hoodie Charcoal",
           "category": "hoodie",
-          "revenue": 5226.0,
+          "revenue": 5226,
           "units": 94,
           "orders": 78
         },
         {
           "product": "Google Canteen Bottle Black",
           "category": "drinkware",
-          "revenue": 5038.0,
+          "revenue": 5038,
           "units": 257,
           "orders": 130
         },
         {
           "product": "Google Utility BackPack",
           "category": "bags",
-          "revenue": 4968.0,
+          "revenue": 4968,
           "units": 50,
           "orders": 47
         },
         {
           "product": "Android Iconic Crewneck Sweatshirt",
           "category": "sweatshirt",
-          "revenue": 4895.0,
+          "revenue": 4895,
           "units": 107,
           "orders": 94
         },
         {
           "product": "Google Black Cloud Zip Hoodie",
           "category": "hoodie",
-          "revenue": 4677.0,
+          "revenue": 4677,
           "units": 83,
           "orders": 53
         },
         {
           "product": "Google Women's Puff Jacket Black",
           "category": "outerwear",
-          "revenue": 4577.0,
+          "revenue": 4577,
           "units": 49,
           "orders": 43
         },
         {
           "product": "Google F/C Longsleeve Charcoal",
           "category": "others",
-          "revenue": 4410.0,
+          "revenue": 4410,
           "units": 175,
           "orders": 118
         },
         {
           "product": "Google Crewneck Sweatshirt Grey",
           "category": "sweatshirt",
-          "revenue": 4323.0,
+          "revenue": 4323,
           "units": 95,
           "orders": 74
         },
         {
           "product": "Google Red Speckled Tee",
           "category": "t-shirt",
-          "revenue": 4308.0,
+          "revenue": 4308,
           "units": 172,
           "orders": 138
         },
         {
           "product": "Google Navy Speckled Tee",
           "category": "t-shirt",
-          "revenue": 4134.0,
+          "revenue": 4134,
           "units": 166,
           "orders": 123
         },
         {
           "product": "Google Campus Bike",
           "category": "others",
-          "revenue": 4064.0,
+          "revenue": 4064,
           "units": 123,
           "orders": 97
         },
         {
           "product": "Google Incognito Techpack V2",
           "category": "bags",
-          "revenue": 3910.0,
+          "revenue": 3910,
           "units": 52,
           "orders": 36
         }
@@ -2322,7 +2322,7 @@
             "pt": "Usuários em vários dias"
           },
           "value": 0.1096718416053194,
-          "previous": 0.09870465744478746,
+          "previous": null,
           "format": "percent",
           "improvement": "up"
         },
@@ -2332,8 +2332,8 @@
             "en": "Active users",
             "pt": "Usuários ativos"
           },
-          "value": 269504.0,
-          "previous": 138438.0,
+          "value": 269504,
+          "previous": null,
           "format": "integer",
           "improvement": "up"
         },
@@ -2343,8 +2343,8 @@
             "en": "Sessions",
             "pt": "Sessões"
           },
-          "value": 358938.0,
-          "previous": 330222.96,
+          "value": 358938,
+          "previous": null,
           "format": "integer",
           "improvement": "up"
         },
@@ -2355,7 +2355,7 @@
             "pt": "Conversão de usuários"
           },
           "value": 0.013777161006886725,
-          "previous": 0.012950531346473521,
+          "previous": null,
           "format": "percent",
           "improvement": "up"
         }
@@ -2851,8 +2851,8 @@
             "en": "Events modeled",
             "pt": "Eventos modelados"
           },
-          "value": 2251084,
-          "previous": 2251084,
+          "value": 4295584,
+          "previous": null,
           "format": "integer",
           "improvement": "up"
         },
@@ -2862,8 +2862,8 @@
             "en": "Distinct sessions",
             "pt": "Sessões distintas"
           },
-          "value": 358938,
-          "previous": 358938,
+          "value": 360129,
+          "previous": null,
           "format": "integer",
           "improvement": "up"
         },
@@ -2874,7 +2874,7 @@
             "pt": "Dias cobertos"
           },
           "value": 92,
-          "previous": 92,
+          "previous": null,
           "format": "integer",
           "improvement": "up"
         }

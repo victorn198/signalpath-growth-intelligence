@@ -10,7 +10,7 @@ React e ECharts oferecem uma interface própria; DuckDB cria marts reproduzívei
 
 1. Comece em **Crescimento Executivo** para identificar o maior desvio.
 2. Mantenha o mesmo contexto de filtros ao navegar para o diagnóstico.
-3. Use **Funil e Jornada** para progressão, **Qualidade de Aquisição** para canais, **Desempenho de Produtos** para demanda e **Comportamento Recorrente** para atividade em vários dias.
+3. Use **Evidência de Jornada** para gaps de alcance, **Qualidade de Aquisição** para canais, **Desempenho de Produtos** para demanda e **Comportamento Recorrente** para atividade em vários dias.
 4. Leia a conclusão sustentada antes da ação recomendada.
 5. Consulte **Confiança dos Dados** antes de apresentar a conclusão.
 6. Use **Restaurar visão padrão** para voltar ao baseline documentado.
@@ -44,7 +44,7 @@ Cada card mostra valor atual, direção, variação percentual e comparação co
 - **Detalhe por país:** apresenta usuários e compradores usados na priorização geográfica.
 - **Ação:** seguir para a página relacionada ao estágio mais fraco.
 
-### 2. Funil e Jornada
+### 2. Evidência de Jornada
 
 - **Objetivo:** localizar onde a jornada perde força.
 - **Compradores ao longo do tempo:** recalcula compradores distintos para a janela e os filtros.
