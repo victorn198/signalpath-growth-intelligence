@@ -179,6 +179,13 @@ function PageLab({ pageId, values, breakdown, detail, referenceDetail, trend, la
   const sessionStage = stageRows.find(row => row.stage === 'session_start')
   const purchaseStage = stageRows.find(row => row.stage === 'purchase')
   const returningUsers = values.returningUsers ?? users * (values.return || 0)
+  const stageName = (value: string) => ({
+    session_start: lang === 'pt' ? 'Início da sessão' : 'Session start',
+    view_item: lang === 'pt' ? 'Visualização do produto' : 'Product view',
+    add_to_cart: lang === 'pt' ? 'Adição ao carrinho' : 'Add to cart',
+    begin_checkout: lang === 'pt' ? 'Início do checkout' : 'Checkout start',
+    purchase: lang === 'pt' ? 'Compra' : 'Purchase',
+  }[value] ?? value.replaceAll('_', ' '))
 
   const commonTrend = <><Stat value={pct(stats.change)} tone={stats.change === null ? undefined : stats.change >= 0 ? 'positive' : 'negative'}>{lang === 'pt' ? 'primeiro ao último ponto (exige base não zero)' : 'first to last point (requires nonzero base)'}</Stat><Stat value={pct(stats.cv)}>{lang === 'pt' ? 'variabilidade relativa' : 'relative variability'}</Stat><Stat value={compact(stats.mean, lang)}>{lang === 'pt' ? 'média do período' : 'period average'}</Stat></>
   let question = ''
@@ -187,8 +194,8 @@ function PageLab({ pageId, values, breakdown, detail, referenceDetail, trend, la
 
   if (pageId === 'funnel') {
     const views: ReactNode[] = [
-      <><Stat value={sessionStage ? compact(num(sessionStage, 'users'), lang) : '—'}>{lang === 'pt' ? 'usuários com session_start · fonte completa' : 'session_start users · full source'}</Stat><Stat value={purchaseStage ? compact(num(purchaseStage, 'users'), lang) : '—'}>{lang === 'pt' ? 'usuários com purchase · fonte completa' : 'purchase users · full source'}</Stat><Stat value={String(stageRows.length)}>{lang === 'pt' ? 'etapas instrumentadas' : 'instrumented stages'}</Stat></>,
-      <><Stat value={reachGap ? `${reachGap.from} / ${reachGap.to}` : '—'}>{lang === 'pt' ? 'eventos comparados · fonte completa' : 'compared events · full source'}</Stat><Stat value={reachGap ? compact(reachGap.gap, lang) : '—'}>{lang === 'pt' ? 'diferença absoluta de alcance' : 'absolute reach difference'}</Stat><Stat value={pct(reachGap?.gapRate ?? null)}>{lang === 'pt' ? 'gap relativo ao primeiro evento' : 'gap relative to first event'}</Stat></>,
+      <><Stat value={sessionStage ? compact(num(sessionStage, 'users'), lang) : '—'}>{lang === 'pt' ? 'usuários que iniciaram sessão · fonte completa' : 'users who started a session · full source'}</Stat><Stat value={purchaseStage ? compact(num(purchaseStage, 'users'), lang) : '—'}>{lang === 'pt' ? 'usuários com compra · fonte completa' : 'users with a purchase · full source'}</Stat><Stat value={String(stageRows.length)}>{lang === 'pt' ? 'etapas instrumentadas' : 'instrumented stages'}</Stat></>,
+      <><Stat value={reachGap ? `${stageName(reachGap.from)} → ${stageName(reachGap.to)}` : '—'}>{lang === 'pt' ? 'eventos comparados · fonte completa' : 'compared events · full source'}</Stat><Stat value={reachGap ? compact(reachGap.gap, lang) : '—'}>{lang === 'pt' ? 'diferença absoluta de alcance' : 'absolute reach difference'}</Stat><Stat value={pct(reachGap?.gapRate ?? null)}>{lang === 'pt' ? 'gap relativo ao primeiro evento' : 'gap relative to first event'}</Stat></>,
       commonTrend,
       <><Stat value={bestSegment ? label(bestSegment, 'driver') : '—'}>{lang === 'pt' ? 'melhor conversão' : 'best conversion'}</Stat><Stat value={bestSegment ? pct(num(bestSegment, rateKey) / 100) : '—'}>{lang === 'pt' ? 'taxa do melhor segmento' : 'best segment rate'}</Stat><Stat value={bestSegment && worstSegment ? `${(num(bestSegment, rateKey) - num(worstSegment, rateKey)).toFixed(1)} p.p.` : '—'}>{lang === 'pt' ? 'distância melhor–pior' : 'best–worst gap'}</Stat></>,
       <><label><span>{lang === 'pt' ? 'Melhoria relativa' : 'Relative improvement'} <b>{uplift}%</b></span><input type="range" min="1" max="30" value={uplift} onChange={event => setUplift(Number(event.target.value))} /></label><Stat value={`+${compact(scenario.incremental, lang)}`}>{lang === 'pt' ? 'compradores incrementais' : 'incremental purchasers'}</Stat><Stat value={`+${compact(orders * scenario.relative, lang)}`}>{lang === 'pt' ? 'registros de compra incrementais' : 'incremental purchase records'}</Stat><Stat value={`+${money(revenue * scenario.relative, lang)}`}>{lang === 'pt' ? 'receita incremental' : 'incremental revenue'}</Stat></>,

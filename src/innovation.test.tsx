@@ -129,8 +129,8 @@ describe('Bilingual lens presentation', () => {
 
   it('selects stage counts by explicit keys instead of row order', () => {
     render(<PageInsight {...props} pageId="funnel" referenceDetail={[{ stage: 'purchase', users: 30 }, { stage: 'session_start', users: 100 }]} />)
-    expect(stat('session_start users · full source')).toBe('100')
-    expect(stat('purchase users · full source')).toBe('30')
+    expect(stat('users who started a session · full source')).toBe('100')
+    expect(stat('users with a purchase · full source')).toBe('30')
     expect(screen.getByText(/Independent event-user counts/)).toBeTruthy()
     fireEvent.click(screen.getByRole('tab', { name: 'Reach gap' }))
     expect(stat('absolute reach difference')).toBe('70')

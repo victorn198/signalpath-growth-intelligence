@@ -107,3 +107,11 @@ test('never shows baseline KPIs when mart access fails',async({page})=>{
   await expect(page.locator('.metric-card')).toHaveCount(0)
   await expect(page.locator('.decision-lab')).toHaveCount(0)
 })
+test('returns to the top when changing dashboard pages',async({page})=>{
+  await page.goto('/')
+  await page.locator('.decision-strip:not(.is-loading)').waitFor({timeout:90000})
+  await page.evaluate(()=>window.scrollTo(0,document.body.scrollHeight))
+  expect(await page.evaluate(()=>window.scrollY)).toBeGreaterThan(0)
+  await page.getByRole('button',{name:'Journey Evidence'}).click()
+  await expect.poll(()=>page.evaluate(()=>window.scrollY)).toBe(0)
+})
