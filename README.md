@@ -6,6 +6,13 @@ A bilingual product analytics case that turns public GA4 event data into decisio
 
 **[Open the live demo](https://signalpath-growth-intelligence.pages.dev/)** · [Leia em português](README.pt-BR.md)
 
+## Documentation
+
+- [Analysis readout](docs/ANALYSIS_READOUT.md)
+- [Data audit](docs/DATA_AUDIT.md)
+- [Dashboard guide](docs/DASHBOARD_GUIDE.md)
+- [Quality review](docs/DASHBOARD_QUALITY_REVIEW.md)
+
 ![SignalPath Executive Growth](docs/images/en/executive-growth.png)
 
 ## Business problem
